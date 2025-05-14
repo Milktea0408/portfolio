@@ -1,4 +1,7 @@
+// import { useNavigate } from "react-router-dom";
 function Navbar() {
+  // const navigate = useNavigate();
+
   return (
     <nav className="fixed top-0 w-full bg-[#eee] text-black flex items-center justify-between px-8 py-4">
       {/* navlinks */}
