@@ -64,7 +64,7 @@ function Contact() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-grow mt-28 px-4 md:px-8 ">
+      <main className="flex-grow mt-32 px-4 md:px-8 ">
         <h1 className="font-bold text-center text-5xl">Contact me</h1>
         <form
           className="flex flex-col justify-items-center content-center mt-11 max-w-sm mx-auto"
@@ -135,7 +135,7 @@ function Contact() {
               {submitStatus.message}
             </div>
           )}
-          
+
           {/* submit btn */}
           <button
             type="submit"
