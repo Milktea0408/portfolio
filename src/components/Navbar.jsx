@@ -1,14 +1,22 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // icons from assets folder
 import linkedinIcon from "../assets/linkedin.svg";
 import emailIcon from "../assets/email.svg";
 import githubIcon from "../assets/github.svg";
+// hamburger and X icon from npm library
+import { Menu, X } from "lucide-react";
 
 function Navbar() {
   const navigate = useNavigate();
+  // usestate for opening/closing menu
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  // a fuction to go to a specified route/page
   function goToPage(page) {
     navigate(page);
+    // close menu after going to the other page
+    setMenuOpen(false);
   }
 
   return (
@@ -84,7 +92,7 @@ function Navbar() {
 
       {/* mobile navbar - 'md:hidden' means to hide this section
       when the screen is above 768px */}
-      <nav className="md:hidden fixed top-0 w-full bg-[#a9a9a9] text-white items-center justify-between px-4 py-3">
+      <nav className="md:hidden fixed top-0 w-full bg-[#a9a9a9] text-white flex items-center justify-between px-4 py-3">
         {/* name in top left corner */}
         <section
           onClick={() => goToPage("/home")}
@@ -92,7 +100,53 @@ function Navbar() {
         >
           LUCY CHEN
         </section>
-        {/* hamburger icon - opens up a menu */}
+        {/* hamburger icon - opens up a menu and toggles between them */}
+        <button onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+
+        {/* menu dropdown */}
+        {menuOpen && (
+          <div className="md:hidden fixed top-12 left-0 w-full bg-[#a9a9a9] text-white flex flex-col gap-4 px-4 py-3 z-10">
+            <a
+              onClick={() => goToPage("/home")}
+              className="cursor-pointer hover:brightness-75"
+            >
+              Home
+            </a>
+            <a
+              onClick={() => goToPage("/contact")}
+              className="cursor-pointer hover:brightness-75"
+            >
+              Contact
+            </a>
+            <a
+              onClick={() => goToPage("/about")}
+              className="cursor-pointer hover:brightness-75"
+            >
+              About
+            </a>
+            <div className="flex gap-3 mt-2">
+              <a
+                href="https://linkedin.com/in/lucy-c-791635216"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6" />
+              </a>
+              <a
+                href="https://github.com/Milktea0408"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={githubIcon} alt="GitHub" className="h-6 w-6" />
+              </a>
+              <a href="mailto:lucychen030408@gmail.com">
+                <img src={emailIcon} alt="Email" className="h-6 w-6" />
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
     </>
   );
