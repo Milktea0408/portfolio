@@ -23,24 +23,24 @@ function Navbar() {
     <>
       {/* mobile neavbar - 'md' prefix for 768px and above only 
       hidden for screens lower than 768px */}
-      <nav className="hidden md:fixed md:top-0 md:w-full md:bg-[#a9a9a9] md:text-white md:flex md:items-center md:justify-between md:px-8 md:py-4">
+      <nav className="hidden md:fixed md:top-0 md:w-full md:text-white md:flex md:items-center md:justify-between md:px-8 md:py-4">
         {/* navlinks */}
-        <section className="flex gap-3">
+        <section className="flex gap-5">
           <a
             onClick={() => goToPage("/home")}
-            className="cursor-pointer hover:brightness-75 transition-all duration-100"
+            className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
           >
             Home
           </a>
           <a
             onClick={() => goToPage("/about")}
-            className="cursor-pointer hover:brightness-75 transition-all duration-100"
+            className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
           >
             About
           </a>
           <a
             onClick={() => goToPage("/contact")}
-            className="cursor-pointer hover:brightness-75 transition-all duration-100"
+            className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
           >
             Contact
           </a>
@@ -55,7 +55,7 @@ function Navbar() {
         </section>
 
         {/* socials */}
-        <section className="flex gap-3">
+        <section className="flex gap-5">
           <a
             className="cursor-pointer"
             href="https://linkedin.com/in/lucy-c-791635216"
@@ -65,7 +65,7 @@ function Navbar() {
             <img
               src={linkedinIcon}
               alt="LinkedIn"
-              className="h-6 w-6 hover:brightness-75 transition-all duration-100"
+              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
             />
           </a>
           <a
@@ -77,14 +77,14 @@ function Navbar() {
             <img
               src={githubIcon}
               alt="GitHub"
-              className="h-6 w-6 hover:brightness-75 transition-all duration-100"
+              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
             />
           </a>
           <a className="cursor-pointer" href="mailto:lucychen030408@gmail.com">
             <img
               src={emailIcon}
               alt="Email"
-              className="h-6 w-6 hover:brightness-75 transition-all duration-100"
+              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
             />
           </a>
         </section>
@@ -92,7 +92,7 @@ function Navbar() {
 
       {/* mobile navbar - 'md:hidden' means to hide this section
       when the screen is above 768px */}
-      <nav className="md:hidden fixed top-0 w-full bg-[#a9a9a9] text-white flex items-center justify-between px-4 py-3">
+      <nav className="md:hidden fixed top-0 w-full text-white flex items-center justify-between px-4 py-3">
         {/* name in top left corner */}
         <section
           onClick={() => goToPage("/home")}
@@ -107,22 +107,22 @@ function Navbar() {
 
         {/* menu dropdown */}
         {menuOpen && (
-          <div className="md:hidden fixed top-12 left-0 w-full bg-[#a9a9a9] text-white flex flex-col gap-4 px-4 py-3 z-10">
+          <div className="md:hidden fixed top-12 left-0 w-full bg-black text-white flex flex-col gap-4 px-4 py-3 z-10">
             <a
               onClick={() => goToPage("/home")}
-              className="cursor-pointer hover:brightness-75"
+              className="cursor-pointer text-sm hover:brightness-75"
             >
               Home
             </a>
             <a
               onClick={() => goToPage("/about")}
-              className="cursor-pointer hover:brightness-75"
+              className="cursor-pointer text-sm hover:brightness-75"
             >
               About
             </a>
             <a
               onClick={() => goToPage("/contact")}
-              className="cursor-pointer hover:brightness-75"
+              className="cursor-pointer text-sm hover:brightness-75"
             >
               Contact
             </a>
@@ -132,17 +132,17 @@ function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6" />
+                <img src={linkedinIcon} alt="LinkedIn" className="h-4 w-4" />
               </a>
               <a
                 href="https://github.com/Milktea0408"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={githubIcon} alt="GitHub" className="h-6 w-6" />
+                <img src={githubIcon} alt="GitHub" className="h-4 w-4" />
               </a>
               <a href="mailto:lucychen030408@gmail.com">
-                <img src={emailIcon} alt="Email" className="h-6 w-6" />
+                <img src={emailIcon} alt="Email" className="h-4 w-4" />
               </a>
             </div>
           </div>

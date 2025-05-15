@@ -4,7 +4,7 @@ import githubIcon from "../assets/github.svg";
 
 function Footer() {
   return (
-    <section className="flex gap-3 w-full bg-[#a9a9a9] flex items-center px-4 md:px-8 py-3">
+    <section className="flex gap-3 w-full flex items-center justify-center px-4 md:px-8 py-3">
       <a
         className="cursor-pointer"
         href="https://linkedin.com/in/lucy-c-791635216"
@@ -14,7 +14,7 @@ function Footer() {
         <img
           src={linkedinIcon}
           alt="LinkedIn"
-          className="h-6 w-6 hover:brightness-75 transition-all duration-100"
+          className="h-4 w-4 hover:brightness-75 transition-all duration-100"
         />
       </a>
       <a
@@ -26,14 +26,14 @@ function Footer() {
         <img
           src={githubIcon}
           alt="GitHub"
-          className="h-6 w-6 hover:brightness-75 transition-all duration-100"
+          className="h-4 w-4 hover:brightness-75 transition-all duration-100"
         />
       </a>
       <a className="cursor-pointer" href="mailto:lucychen030408@gmail.com">
         <img
           src={emailIcon}
           alt="Email"
-          className="h-6 w-6 hover:brightness-75 transition-all duration-100"
+          className="h-4 w-4 hover:brightness-75 transition-all duration-100"
         />
       </a>
     </section>
