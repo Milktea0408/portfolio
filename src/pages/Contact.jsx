@@ -45,7 +45,7 @@ function Contact() {
         "template_c7lxk4p",
         templateParams,
         // public key
-        "JT5QdRlpHtiGqDCc8" 
+        "JT5QdRlpHtiGqDCc8"
       );
 
       setFormData({ name: "", email: "", message: "" });
@@ -126,7 +126,7 @@ function Contact() {
           {/* status message */}
           {submitStatus && (
             <div
-              className={`mb-4 p-3 rounded-lg text-sm ${
+              className={`mt-5 p-3 rounded-lg text-sm ${
                 submitStatus.success
                   ? "bg-green-100 text-green-800"
                   : "bg-red-100 text-red-800"
@@ -135,12 +135,12 @@ function Contact() {
               {submitStatus.message}
             </div>
           )}
-
+          
           {/* submit btn */}
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`mt-4 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center transition-colors duration-300 
+            className={`mt-5 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center transition-colors duration-300 
               ${
                 isSubmitting
                   ? "bg-gray-300 text-gray-500 cursor-not-allowed"
