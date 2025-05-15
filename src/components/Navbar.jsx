@@ -33,16 +33,16 @@ function Navbar() {
             Home
           </a>
           <a
-            onClick={() => goToPage("/contact")}
-            className="cursor-pointer hover:brightness-75 transition-all duration-100"
-          >
-            Contact
-          </a>
-          <a
             onClick={() => goToPage("/about")}
             className="cursor-pointer hover:brightness-75 transition-all duration-100"
           >
             About
+          </a>
+          <a
+            onClick={() => goToPage("/contact")}
+            className="cursor-pointer hover:brightness-75 transition-all duration-100"
+          >
+            Contact
           </a>
         </section>
 
@@ -115,16 +115,16 @@ function Navbar() {
               Home
             </a>
             <a
-              onClick={() => goToPage("/contact")}
-              className="cursor-pointer hover:brightness-75"
-            >
-              Contact
-            </a>
-            <a
               onClick={() => goToPage("/about")}
               className="cursor-pointer hover:brightness-75"
             >
               About
+            </a>
+            <a
+              onClick={() => goToPage("/contact")}
+              className="cursor-pointer hover:brightness-75"
+            >
+              Contact
             </a>
             <div className="flex gap-3 mt-2">
               <a
