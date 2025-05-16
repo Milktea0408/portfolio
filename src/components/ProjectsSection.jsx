@@ -4,31 +4,33 @@ import { ArrowLeft, ArrowRight, Github, ExternalLink } from "lucide-react";
 // Sample projects data - replace with your own projects
 const projectsData = [
   {
+    // personal website
     id: 1,
     title: "Personal Portfolio",
     description:
       "A responsive personal portfolio website built with React and Tailwind CSS.",
-    image: "/path/to/portfolio-image.png", // Replace with your image path
+    image: "./src//assets/default_project_image.jpg", // Replace with your image path
     technologies: ["React", "Tailwind CSS", "JavaScript"],
-    githubUrl: "https://github.com/yourusername/portfolio",
+    githubUrl: "https://github.com/Milktea0408/personal_website/",
     liveUrl: "https://yourportfolio.com",
   },
   {
+    // internship website project
     id: 2,
-    title: "E-commerce Platform",
+    title: "Internship Front-End Project",
     description:
-      "A full-stack e-commerce application with user authentication and payment processing.",
-    image: "/path/to/ecommerce-image.png", // Replace with your image path
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    githubUrl: "https://github.com/yourusername/ecommerce",
-    liveUrl: "https://yourecommerce.com",
+      "A modern, responsive website built for a startup during my internship. I worked on front-end development and contributed to key sections of the site.",
+    image: "./src//assets/default_project_image.jpg", // Replace with your image path
+    technologies: ["HTML", "CSS", "JavaScript", "PostgreSQL"],
+    githubUrl: null, // private repo
+    liveUrl: "https://ignitionstudio.co/",
   },
   {
     id: 3,
     title: "Task Management App",
     description:
       "A productivity app that helps users organize tasks and track progress.",
-    image: "/path/to/taskapp-image.png", // Replace with your image path
+    image: "./src//assets/default_project_image.jpg", // Replace with your image path
     technologies: ["React", "Firebase", "Material UI"],
     githubUrl: "https://github.com/yourusername/task-app",
     liveUrl: "https://yourtaskapp.com",
@@ -83,7 +85,7 @@ function ProjectsSection() {
               <img
                 src={currentProject.image}
                 alt={currentProject.title}
-                className="w-full h-full object-cover text-black"
+                className="w-full h-full object-fit text-black"
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-gray-300">
@@ -102,7 +104,9 @@ function ProjectsSection() {
 
               {/* Technologies used */}
               <div className="mb-4">
-                <h3 className="text-sm font-semibold mb-2 text-black">Tech Stack:</h3>
+                <h3 className="text-sm font-semibold mb-2 text-black">
+                  Tech Stack:
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {currentProject.technologies.map((tech, index) => (
                     <span
@@ -118,6 +122,7 @@ function ProjectsSection() {
 
             {/* Links */}
             <div className="flex gap-4 mt-4">
+              {/* only show the github btn if the url is not null */}
               {currentProject.githubUrl && (
                 <a
                   href={currentProject.githubUrl}
