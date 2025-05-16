@@ -1,12 +1,18 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 // programming languages icons
+import boostrapIcon from "../assets/bootstrap.svg";
+import cssIcon from "../assets/css.svg";
+import html5Icon from "../assets/html5.svg";
 import javaIcon from "../assets/java.svg";
 import javascriptIcon from "../assets/javascript.svg";
-import typescriptIcon from "../assets/typescript.svg";
+import materialUIIcon from "../assets/materialui.svg";
 import nodeJSIcon from "../assets/nodejs.svg";
+import postgresqlIcon from "../assets/postgresql.svg"
 import pythonIcon from "../assets/python.svg";
 import reactIcon from "../assets/react.svg";
+import tailwindIcon from "../assets/tailwind.svg";
+import typescriptIcon from "../assets/typescript.svg";
 
 function Home() {
   return (
@@ -60,23 +66,23 @@ function Home() {
               <p>React</p>
             </div>
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="HTML logo" src="temp.jpg" />
+              <img alt="HTML logo" src={html5Icon} />
               <p>HTML</p>
             </div>
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="CSS logo" src="temp.jpg" />
+              <img alt="CSS logo" src={cssIcon} />
               <p>CSS</p>
             </div>
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="BootStrap logo" src="temp.jpg" />
+              <img alt="BootStrap logo" src={boostrapIcon} />
               <p>BootStrap</p>
             </div>
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="Tailwind logo" src="temp.jpg" />
+              <img alt="Tailwind logo" src={tailwindIcon} />
               <p>Tailwind</p>
             </div>
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="Material UI logo" src="temp.jpg" />
+              <img alt="Material UI logo" src={materialUIIcon} />
               <p>Material UI</p>
             </div>
           </div>
@@ -85,7 +91,7 @@ function Home() {
           <h2 className="text-xl">Backend + Database</h2>
           <div className="flex gap-5 flex-wrap my-7">
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="PostgreSQL logo" src="temp.jpg" />
+              <img alt="PostgreSQL logo" src={postgresqlIcon} />
               <p>PostgreSQL</p>
             </div>
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
