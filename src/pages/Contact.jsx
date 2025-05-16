@@ -145,7 +145,7 @@ function Contact() {
               ${
                 isSubmitting
                   ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                  : "bg-white text-black border border-black hover:bg-gray-700 hover:text-white"
+                  : "bg-white text-black border border-black hover:bg-gray-500 hover:text-white"
               }`}
             >
               {isSubmitting ? "Sending..." : "Submit"}

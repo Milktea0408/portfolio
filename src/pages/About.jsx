@@ -82,7 +82,7 @@ function About() {
         <div className="flex justify-center">
           <button
             onClick={toHomePage}
-            className={`mt-5 mb-10 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors duration-300 bg-white text-black border border-black hover:bg-gray-700 hover:text-white`}
+            className={`mt-5 mb-10 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors duration-300 bg-white text-black border border-black hover:bg-gray-500 hover:text-white`}
           >
             See my work
           </button>
