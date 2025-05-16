@@ -31,7 +31,7 @@ function Home() {
               Lucy Chen
             </h1>
             <p className="mt-2 text-gray-600 text-sm md:text-base">
-              Front-end and web developer. Software Engineer.
+              Front-end and web developer | Software Engineer
             </p>
           </div>
         </section>
