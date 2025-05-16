@@ -22,15 +22,13 @@ function About() {
             A Little Bit About Me
           </h1>
           <div className="flex flex-col gap-5 sm:flex-row sm:gap-20">
-            <div className="flex flex-col gap-2">
-              <p className="text-xs sm:text-sm md:text-base flex-1">
-                Hi there!
-              </p>
-              <p className="text-xs sm:text-sm md:text-base flex-1">
+            <div className="flex flex-col gap-3 md:gap-4">
+              <p className="text-xs sm:text-sm md:text-base">Hi there!</p>
+              <p className="text-xs sm:text-sm md:text-base">
                 I'm Lucy. A Sydney-based web developer with a background in
                 Computer Science.
               </p>
-              <p className="text-xs sm:text-sm md:text-base flex-1">
+              <p className="text-xs sm:text-sm md:text-base">
                 I enjoy building clean, responsive interfaces and creating
                 meaningful user experiences. I'm always looking to learn and
                 grow — whether through uni, internships, or side projects.
@@ -49,9 +47,13 @@ function About() {
           <h1 className="font-bold text-2xl md:text-3xl mb-3 md:mb-5">
             Hobbies and Interests
           </h1>
-          <p className="my-6">Outside of tech, I'm also interested in ...</p>
+          <p className="my-6">
+            Outside of tech, I enjoy spending time with quiet hobbies that help
+            me recharge.
+          </p>
           <section className="flex flex-col gap-5 content-around sm:flex-row">
             <div className="flex flex-col gap-2 mt-2">
+              <p>Favourite drinks</p>
               <img alt="interest image 1" />
               <p className="text-xs sm:text-sm md:text-base">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -59,6 +61,7 @@ function About() {
               </p>
             </div>
             <div className="flex flex-col gap-2 mt-2">
+              <p>Music</p>
               <img alt="interest image 2" />
               <p className="text-xs sm:text-sm md:text-base">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -66,6 +69,7 @@ function About() {
               </p>
             </div>
             <div className="flex flex-col gap-2 mt-2">
+              <p>Movies</p>
               <img alt="interest image 3" />
               <p className="text-xs sm:text-sm md:text-base">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
