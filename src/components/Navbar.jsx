@@ -96,7 +96,7 @@ function Navbar() {
 
       {/* mobile navbar - 'md:hidden' means to hide this section
       when the screen is above 768px */}
-      <nav className="md:hidden bg-black fixed top-0 w-full text-white flex items-center justify-between px-4 py-3">
+      <nav className="md:hidden bg-black fixed top-0 w-full text-white flex items-center justify-between px-4 py-3 z-10">
         {/* name in top left corner */}
         <section
           onClick={(e) => goToPage(e, "/home")}
