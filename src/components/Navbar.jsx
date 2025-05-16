@@ -13,7 +13,8 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // a fuction to go to a specified route/page
-  function goToPage(page) {
+  function goToPage(e, page) {
+    e.preventDefault();
     navigate(page);
     // close menu after going to the other page
     setMenuOpen(false);
@@ -27,19 +28,19 @@ function Navbar() {
         {/* navlinks */}
         <section className="flex gap-5">
           <a
-            onClick={() => goToPage("/home")}
+            onClick={(e) => goToPage(e, "/home")}
             className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
           >
             Home
           </a>
           <a
-            onClick={() => goToPage("/about")}
+            onClick={(e) => goToPage(e, "/about")}
             className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
           >
             About
           </a>
           <a
-            onClick={() => goToPage("/contact")}
+            onClick={(e) => goToPage(e, "/contact")}
             className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
           >
             Contact
@@ -48,7 +49,7 @@ function Navbar() {
 
         {/* name in the middle */}
         <section
-          onClick={() => goToPage("/home")}
+          onClick={(e) => goToPage(e, "/home")}
           className="font-bold cursor-pointer hover:brightness-75 transition-all duration-100"
         >
           LUCY CHEN
@@ -109,19 +110,19 @@ function Navbar() {
         {menuOpen && (
           <div className="md:hidden fixed top-12 left-0 w-full bg-black text-white flex flex-col gap-4 px-4 py-3 z-10">
             <a
-              onClick={() => goToPage("/home")}
+              onClick={(e) => goToPage(e, "/home")}
               className="cursor-pointer text-sm hover:brightness-75"
             >
               Home
             </a>
             <a
-              onClick={() => goToPage("/about")}
+              onClick={(e) => goToPage(e, "/about")}
               className="cursor-pointer text-sm hover:brightness-75"
             >
               About
             </a>
             <a
-              onClick={() => goToPage("/contact")}
+              onClick={(e) => goToPage(e, "/contact")}
               className="cursor-pointer text-sm hover:brightness-75"
             >
               Contact
