@@ -32,7 +32,7 @@ function About() {
         </section>
 
         {/* hobbies/ interests section */}
-        <secton>
+        <section>
           <h1 className="font-bold text-3xl mb-5">Hobbies and Interests</h1>
           <section className="flex flex-col gap-5 content-around sm:flex-row">
             <div className="flex flex-col gap-2 mt-2">
@@ -57,7 +57,7 @@ function About() {
               </p>
             </div>
           </section>
-        </secton>
+        </section>
         {/* cta button to go back to home page where the projects are */}
         <div className="flex justify-center">
           <button
