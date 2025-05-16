@@ -24,7 +24,7 @@ function Navbar() {
     <>
       {/* mobile neavbar - 'md' prefix for 768px and above only 
       hidden for screens lower than 768px */}
-      <nav className="hidden md:bg-black md:fixed md:top-0 md:w-full md:text-white md:flex md:items-center md:justify-between md:px-8 md:py-4">
+      <nav className="hidden md:bg-black md:fixed md:top-0 md:w-full md:text-white md:flex md:items-center md:justify-between md:px-8 md:py-4 z-10">
         {/* navlinks */}
         <section className="flex gap-5">
           <a
