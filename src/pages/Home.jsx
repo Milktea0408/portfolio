@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ProjectsSection from "../components/ProjectsSection";
 // programming languages icons
 import bashIcon from "../assets/bash.svg";
 import boostrapIcon from "../assets/bootstrap.svg";
@@ -29,6 +30,7 @@ function Home() {
         <section>
           <h1 className="font-bold text-2xl md:text-3xl mb-3 md:mb-5">Projects</h1>
           {/* carousel slider of projects you've done + links to their github repos */}
+          <ProjectsSection />
         </section>
 
         {/* tech stack */}
