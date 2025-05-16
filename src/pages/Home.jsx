@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -26,6 +29,7 @@ function Home() {
           <h2 className="text-xl">Backend + Database</h2>
           {/* postgresql, node.js */}
         </section>
+
       </main>
       <Footer />
     </div>
