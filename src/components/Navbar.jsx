@@ -28,18 +28,21 @@ function Navbar() {
         {/* navlinks */}
         <section className="flex gap-5">
           <a
+            href="/home"
             onClick={(e) => goToPage(e, "/home")}
             className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
           >
             Home
           </a>
           <a
+            href="/about"
             onClick={(e) => goToPage(e, "/about")}
             className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
           >
             About
           </a>
           <a
+            href="/contact"
             onClick={(e) => goToPage(e, "/contact")}
             className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
           >
@@ -96,7 +99,7 @@ function Navbar() {
       <nav className="md:hidden bg-black fixed top-0 w-full text-white flex items-center justify-between px-4 py-3">
         {/* name in top left corner */}
         <section
-          onClick={() => goToPage("/home")}
+          onClick={(e) => goToPage(e, "/home")}
           className="font-bold cursor-pointer hover:brightness-75 transition-all duration-100"
         >
           LUCY CHEN
@@ -110,18 +113,21 @@ function Navbar() {
         {menuOpen && (
           <div className="md:hidden fixed top-12 left-0 w-full bg-black text-white flex flex-col gap-4 px-4 py-3 z-10">
             <a
+              href="/home"
               onClick={(e) => goToPage(e, "/home")}
               className="cursor-pointer text-sm hover:brightness-75"
             >
               Home
             </a>
             <a
+              href="/about"
               onClick={(e) => goToPage(e, "/about")}
               className="cursor-pointer text-sm hover:brightness-75"
             >
               About
             </a>
             <a
+              href="/contact"
               onClick={(e) => goToPage(e, "/contact")}
               className="cursor-pointer text-sm hover:brightness-75"
             >
