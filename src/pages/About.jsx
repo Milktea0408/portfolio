@@ -5,11 +5,12 @@ function About() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-grow mt-32 px-12 md:px-24">
-        <h1 className="font-bold text-3xl">A Little Bit About Me</h1>
+      <main className="flex-grow mt-32 px-12 md:px-24 flex flex-col gap-10">
+        {/* about yourself section */}
         <section>
-          <div className="flex flex-col sm:flex-row sm:gap-20">
-            <p>
+          <h1 className="font-bold text-3xl">A Little Bit About Me</h1>
+          <div className="flex flex-col gap-5 sm:flex-row sm:gap-20">
+            <p className="text-sm">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -21,6 +22,34 @@ function About() {
             <img alt="profile image" />
           </div>
         </section>
+
+        {/* hobbies/ interests section */}
+        <secton>
+          <h1 className="font-bold text-3xl">Hobbies and Interests</h1>
+          <section className="flex flex-row gap-2 content-around sm:flex-col">
+            <div className="flex flex-col gap-2 mt-2">
+              <img alt="interest image 1" />
+              <p className="text-sm">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              </p>
+            </div>
+            <div className="flex flex-col gap-2 mt-2">
+              <img alt="interest image 2" />
+              <p className="text-sm">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              </p>
+            </div>
+            <div className="flex flex-col gap-2 mt-2">
+              <img alt="interest image 3" />
+              <p className="text-sm">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              </p>
+            </div>
+          </section>
+        </secton>
       </main>
       <Footer />
     </div>
