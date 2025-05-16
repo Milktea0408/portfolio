@@ -1,0 +1,186 @@
+import { useState, useEffect } from "react";
+import { ArrowLeft, ArrowRight, Github, ExternalLink } from "lucide-react";
+
+// Sample projects data - replace with your own projects
+const projectsData = [
+  {
+    id: 1,
+    title: "Personal Portfolio",
+    description:
+      "A responsive personal portfolio website built with React and Tailwind CSS.",
+    image: "/path/to/portfolio-image.png", // Replace with your image path
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
+    githubUrl: "https://github.com/yourusername/portfolio",
+    liveUrl: "https://yourportfolio.com",
+  },
+  {
+    id: 2,
+    title: "E-commerce Platform",
+    description:
+      "A full-stack e-commerce application with user authentication and payment processing.",
+    image: "/path/to/ecommerce-image.png", // Replace with your image path
+    technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    githubUrl: "https://github.com/yourusername/ecommerce",
+    liveUrl: "https://yourecommerce.com",
+  },
+  {
+    id: 3,
+    title: "Task Management App",
+    description:
+      "A productivity app that helps users organize tasks and track progress.",
+    image: "/path/to/taskapp-image.png", // Replace with your image path
+    technologies: ["React", "Firebase", "Material UI"],
+    githubUrl: "https://github.com/yourusername/task-app",
+    liveUrl: "https://yourtaskapp.com",
+  },
+  // Add more projects as needed
+];
+
+function ProjectsSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if screen is mobile
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+  }, []);
+
+  // Navigate to previous project
+  const prevProject = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? projectsData.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Navigate to next project
+  const nextProject = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === projectsData.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  // Get current project
+  const currentProject = projectsData[currentIndex];
+
+  return (
+    <section>
+      {/* Project carousel */}
+      <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+        {/* Project content */}
+        <div className="flex flex-col md:flex-row">
+          {/* Project image */}
+          <div className="w-full md:w-1/2 h-48 md:h-80 bg-gray-200 relative">
+            {currentProject.image ? (
+              <img
+                src={currentProject.image}
+                alt={currentProject.title}
+                className="w-full h-full object-cover text-black"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-gray-300">
+                <p className="text-gray-600">Project Screenshot</p>
+              </div>
+            )}
+          </div>
+
+          {/* Project details */}
+          <div className="w-full md:w-1/2 p-6 flex flex-col justify-between">
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-black">
+                {currentProject.title}
+              </h2>
+              <p className="text-gray-700 mb-4">{currentProject.description}</p>
+
+              {/* Technologies used */}
+              <div className="mb-4">
+                <h3 className="text-sm font-semibold mb-2 text-black">Tech Stack:</h3>
+                <div className="flex flex-wrap gap-2">
+                  {currentProject.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Links */}
+            <div className="flex gap-4 mt-4">
+              {currentProject.githubUrl && (
+                <a
+                  href={currentProject.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-sm bg-black text-white px-3 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                >
+                  <Github size={16} />
+                  <span>GitHub</span>
+                </a>
+              )}
+
+              {currentProject.liveUrl && (
+                <a
+                  href={currentProject.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-sm bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  <ExternalLink size={16} />
+                  <span>Live Demo</span>
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation arrows */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 md:px-4">
+          <button
+            onClick={prevProject}
+            className="bg-black/50 hover:bg-black/70 text-white p-1 md:p-2 rounded-full"
+            aria-label="Previous project"
+          >
+            <ArrowLeft size={isMobile ? 16 : 24} />
+          </button>
+          <button
+            onClick={nextProject}
+            className="bg-black/50 hover:bg-black/70 text-white p-1 md:p-2 rounded-full"
+            aria-label="Next project"
+          >
+            <ArrowRight size={isMobile ? 16 : 24} />
+          </button>
+        </div>
+
+        {/* Pagination dots */}
+        <div className="absolute bottom-2 left-0 right-0">
+          <div className="flex justify-center gap-2">
+            {projectsData.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full ${
+                  index === currentIndex ? "bg-black" : "bg-gray-400"
+                }`}
+                aria-label={`Go to project ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default ProjectsSection;
