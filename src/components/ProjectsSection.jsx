@@ -85,7 +85,7 @@ function ProjectsSection() {
               <img
                 src={currentProject.image}
                 alt={currentProject.title}
-                className="w-full h-full object-fit text-black"
+                className="w-full h-full object-contain text-black"
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-gray-300">
