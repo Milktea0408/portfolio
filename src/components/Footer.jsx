@@ -4,7 +4,7 @@ import githubIcon from "../assets/github.svg";
 
 function Footer() {
   return (
-    <section className="flex gap-3 w-full flex items-center justify-center px-4 md:px-8 py-3">
+    <section className="flex gap-3 w-full flex items-center justify-center px-4 py-3 md:px-8 md:py-6">
       <a
         className="cursor-pointer"
         href="https://linkedin.com/in/lucy-c-791635216"
