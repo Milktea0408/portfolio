@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+// profile pic
+import temp_avatar from "../assets/temp_avatar.png";
 
 function About() {
   const navigate = useNavigate();
@@ -29,7 +31,7 @@ function About() {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum."
             </p>
-            <img alt="profile image" className="flex-1" />
+            <img alt="profile image" src={temp_avatar} className="flex-1 w-32" />
           </div>
         </section>
 
