@@ -23,7 +23,7 @@ function Navbar() {
     <>
       {/* mobile neavbar - 'md' prefix for 768px and above only 
       hidden for screens lower than 768px */}
-      <nav className="hidden md:fixed md:top-0 md:w-full md:text-white md:flex md:items-center md:justify-between md:px-8 md:py-4">
+      <nav className="hidden md:bg-black md:fixed md:top-0 md:w-full md:text-white md:flex md:items-center md:justify-between md:px-8 md:py-4">
         {/* navlinks */}
         <section className="flex gap-5">
           <a
@@ -92,7 +92,7 @@ function Navbar() {
 
       {/* mobile navbar - 'md:hidden' means to hide this section
       when the screen is above 768px */}
-      <nav className="md:hidden fixed top-0 w-full text-white flex items-center justify-between px-4 py-3">
+      <nav className="md:hidden bg-black fixed top-0 w-full text-white flex items-center justify-between px-4 py-3">
         {/* name in top left corner */}
         <section
           onClick={() => goToPage("/home")}
