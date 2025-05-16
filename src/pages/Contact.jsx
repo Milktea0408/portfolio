@@ -137,18 +137,20 @@ function Contact() {
           )}
 
           {/* submit btn */}
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className={`mt-5 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center transition-colors duration-300 
+          <div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`mt-5 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors duration-300 
               ${
                 isSubmitting
                   ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                   : "bg-white text-black border border-black hover:bg-gray-700 hover:text-white"
               }`}
-          >
-            {isSubmitting ? "Sending..." : "Submit"}
-          </button>
+            >
+              {isSubmitting ? "Sending..." : "Submit"}
+            </button>
+          </div>
         </form>
       </main>
       <Footer />
