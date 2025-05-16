@@ -25,7 +25,7 @@ function Home() {
       <Navbar />
       <main className="flex-grow mt-32 px-4 sm:px-8 md:px-12 lg:px-24 flex flex-col gap-6 md:gap-10">
         <section className="flex flex-col-reverse justify-center md:flex-row">
-          <img src={temp_avatar} alt="profile image" className="w-48 h-48" />
+          <img src={temp_avatar} alt="profile image" className="w-48 h-auto object-contain" />
           <div className="flex flex-col justify-center">
             <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               Lucy Chen

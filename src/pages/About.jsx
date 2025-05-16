@@ -22,16 +22,25 @@ function About() {
             A Little Bit About Me
           </h1>
           <div className="flex flex-col gap-5 sm:flex-row sm:gap-20">
-            <p className="text-xs sm:text-sm md:text-base flex-1">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-            <img alt="profile image" src={temp_avatar} className="flex-1 w-32" />
+            <div className="flex flex-col gap-2">
+              <p className="text-xs sm:text-sm md:text-base flex-1">
+                Hi there!
+              </p>
+              <p className="text-xs sm:text-sm md:text-base flex-1">
+                I'm Lucy. A Sydney-based web developer with a background in
+                Computer Science.
+              </p>
+              <p className="text-xs sm:text-sm md:text-base flex-1">
+                I enjoy building clean, responsive interfaces and creating
+                meaningful user experiences. I'm always looking to learn and
+                grow — whether through uni, internships, or side projects.
+              </p>
+            </div>
+            <img
+              alt="profile image"
+              src={temp_avatar}
+              className="flex-1 w-48 h-auto object-contain"
+            />
           </div>
         </section>
 
@@ -40,6 +49,7 @@ function About() {
           <h1 className="font-bold text-2xl md:text-3xl mb-3 md:mb-5">
             Hobbies and Interests
           </h1>
+          <p className="my-6">Outside of tech, I'm also interested in ...</p>
           <section className="flex flex-col gap-5 content-around sm:flex-row">
             <div className="flex flex-col gap-2 mt-2">
               <img alt="interest image 1" />
