@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 function About() {
   const navigate = useNavigate();
-  
+
   // goes back to the home page
   function toHomePage() {
     navigate("/home");
@@ -13,12 +13,14 @@ function About() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-grow mt-32 px-12 md:px-24 flex flex-col gap-10">
+      <main className="flex-grow mt-32 px-4 sm:px-8 md:px-12 lg:px-24 flex flex-col gap-6 md:gap-10">
         {/* about yourself section */}
         <section>
-          <h1 className="font-bold text-3xl mb-5">A Little Bit About Me</h1>
+          <h1 className="font-bold text-2xl md:text-3xl mb-3 md:mb-5">
+            A Little Bit About Me
+          </h1>
           <div className="flex flex-col gap-5 sm:flex-row sm:gap-20">
-            <p className="text-sm flex-1">
+            <p className="text-xs sm:text-sm md:text-base flex-1">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -33,25 +35,27 @@ function About() {
 
         {/* hobbies/ interests section */}
         <section>
-          <h1 className="font-bold text-3xl mb-5">Hobbies and Interests</h1>
+          <h1 className="font-bold text-2xl md:text-3xl mb-3 md:mb-5">
+            Hobbies and Interests
+          </h1>
           <section className="flex flex-col gap-5 content-around sm:flex-row">
             <div className="flex flex-col gap-2 mt-2">
               <img alt="interest image 1" />
-              <p className="text-sm">
+              <p className="text-xs sm:text-sm md:text-base">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua."
               </p>
             </div>
             <div className="flex flex-col gap-2 mt-2">
               <img alt="interest image 2" />
-              <p className="text-sm">
+              <p className="text-xs sm:text-sm md:text-base">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua."
               </p>
             </div>
             <div className="flex flex-col gap-2 mt-2">
               <img alt="interest image 3" />
-              <p className="text-sm">
+              <p className="text-xs sm:text-sm md:text-base">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua."
               </p>
