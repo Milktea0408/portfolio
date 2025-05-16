@@ -34,7 +34,7 @@ function About() {
         {/* hobbies/ interests section */}
         <secton>
           <h1 className="font-bold text-3xl mb-5">Hobbies and Interests</h1>
-          <section className="flex flex-col gap-2 content-around sm:flex-row">
+          <section className="flex flex-col gap-5 content-around sm:flex-row">
             <div className="flex flex-col gap-2 mt-2">
               <img alt="interest image 1" />
               <p className="text-sm">

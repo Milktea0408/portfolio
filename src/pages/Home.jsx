@@ -36,7 +36,7 @@ function Home() {
 
           {/* js/ts, python, c, dash, */}
           <h2 className="text-xl">Programming Languages</h2>
-          <div className="flex gap-5 flex-wrap my-7">
+          <div className="flex gap-5 flex-wrap my-7 justify-center">
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img alt="Javascript logo" src={javascriptIcon} />
               <p>Javascript</p>
@@ -61,7 +61,7 @@ function Home() {
 
           {/* react, html, css, bootstrap, tailwind, material ui */}
           <h2 className="text-xl">Frontend</h2>
-          <div className="flex gap-5 flex-wrap my-7">
+          <div className="flex gap-5 flex-wrap my-7 justify-center">
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img alt="React logo" src={reactIcon} />
               <p>React</p>
@@ -90,7 +90,7 @@ function Home() {
 
           {/* postgresql, node.js */}
           <h2 className="text-xl">Backend + Database</h2>
-          <div className="flex gap-5 flex-wrap my-7">
+          <div className="flex gap-5 flex-wrap my-7 justify-center">
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img alt="PostgreSQL logo" src={postgresqlIcon} />
               <p>PostgreSQL</p>
