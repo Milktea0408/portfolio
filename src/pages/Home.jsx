@@ -1,9 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 function Home() {
-  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -15,13 +13,13 @@ function Home() {
 
         {/* Projects + links to each project made */}
         <section>
-          <h1 className="font-bold text-3xl">Projects</h1>
+          <h1 className="font-bold text-3xl mb-5">Projects</h1>
           {/* carousel slider of projects you've done + links to their github repos */}
         </section>
 
         {/* tech stack */}
         <section>
-          <h1 className="font-bold text-3xl">Technical Skills</h1>
+          <h1 className="font-bold text-3xl mb-5">Technical Skills</h1>
           <h2 className="text-xl">Programming Languages</h2>
           {/* js/ts, python, c, dash, */}
           <h2 className="text-xl">Frontend</h2>

@@ -1,7 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 function About() {
+  const navigate = useNavigate();
+  
+  // goes back to the home page
+  function toHomePage() {
+    navigate("/home");
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -53,6 +61,7 @@ function About() {
         {/* cta button to go back to home page where the projects are */}
         <div className="flex justify-center">
           <button
+            onClick={toHomePage}
             className={`mt-5 mb-10 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors duration-300 bg-white text-black border border-black hover:bg-gray-700 hover:text-white`}
           >
             See my work
