@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 // programming languages icons
+import bashIcon from "../assets/bash.svg";
 import boostrapIcon from "../assets/bootstrap.svg";
 import cIcon from "../assets/c_programming.svg";
 import cssIcon from "../assets/css.svg";
@@ -34,7 +35,7 @@ function Home() {
         <section>
           <h1 className="font-bold text-3xl mb-5">Technical Skills</h1>
 
-          {/* js/ts, python, c, dash, */}
+          {/* js/ts, python, c, dash, java */}
           <h2 className="text-xl">Programming Languages</h2>
           <div className="flex gap-5 flex-wrap my-7 justify-center">
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
@@ -56,6 +57,10 @@ function Home() {
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img alt="Java logo" src={javaIcon} />
               <p>Java</p>
+            </div>
+            <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+              <img alt="Bash logo" src={bashIcon} />
+              <p>Bash</p>
             </div>
           </div>
 
