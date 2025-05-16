@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 // programming languages icons
 import boostrapIcon from "../assets/bootstrap.svg";
+import cIcon from "../assets/c_programming.svg";
 import cssIcon from "../assets/css.svg";
 import html5Icon from "../assets/html5.svg";
 import javaIcon from "../assets/java.svg";
@@ -49,7 +50,7 @@ function Home() {
               <p>Python</p>
             </div>
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="C logo" src="temp.jpg" />
+              <img alt="C logo" src={cIcon} />
               <p>C</p>
             </div>
             <div className="w-32 h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
