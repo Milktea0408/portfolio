@@ -47,7 +47,7 @@ function About() {
           <h1 className="font-bold text-2xl md:text-3xl mb-3 md:mb-5">
             Hobbies and Interests
           </h1>
-          <p className="my-6">
+          <p className="text-xs my-4 sm:text-sm md:text-base">
             Outside of tech, I enjoy spending time with quiet hobbies that help
             me recharge.
           </p>
