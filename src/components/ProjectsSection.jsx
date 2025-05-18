@@ -80,7 +80,7 @@ function ProjectsSection() {
         {/* Project content */}
         <div className="flex flex-col md:flex-row">
           {/* Project image */}
-          <div className="w-full md:w-1/2 h-48 md:h-80 bg-gray-900 relative">
+          <div className="w-full md:w-1/2 h-48 md:h-80 relative">
             {currentProject.image ? (
               <img
                 src={currentProject.image}
