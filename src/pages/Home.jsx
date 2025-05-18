@@ -61,7 +61,7 @@ function Home() {
         {/* tech stack */}
         <section className="bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg">
           <h1
-            className="font-bold text-2xl md:text-3xl mb-3 md:mb-
+            className="font-bold text-2xl md:text-3xl mb-3 md:mb-5
           bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
           >
             Technical Skills
@@ -72,7 +72,7 @@ function Home() {
             Programming Languages
           </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
                 alt="Javascript logo"
                 src={javascriptIcon}
@@ -80,7 +80,7 @@ function Home() {
               />
               <p className="text-xs sm:text-sm md:text-base">Javascript</p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
                 alt="TypeScript logo"
                 src={typescriptIcon}
@@ -88,7 +88,7 @@ function Home() {
               />
               <p className="text-xs sm:text-sm md:text-base">Typescript</p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
                 alt="Python logo"
                 src={pythonIcon}
@@ -96,15 +96,15 @@ function Home() {
               />
               <p className="text-xs sm:text-sm md:text-base">Python</p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img alt="C logo" src={cIcon} className="w-1/2 md:w-3/5" />
               <p className="text-xs sm:text-sm md:text-base">C</p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img alt="Java logo" src={javaIcon} className="w-1/2 md:w-3/5" />
               <p className="text-xs sm:text-sm md:text-base">Java</p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img alt="Bash logo" src={bashIcon} className="w-1/2 md:w-3/5" />
               <p className="text-xs sm:text-sm md:text-base">Bash</p>
             </div>
@@ -115,7 +115,7 @@ function Home() {
             Frontend
           </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
                 alt="React logo"
                 src={reactIcon}
@@ -123,15 +123,15 @@ function Home() {
               />
               <p className="text-xs sm:text-sm md:text-base">React</p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img alt="HTML logo" src={html5Icon} className="w-1/2 md:w-3/5" />
               <p className="text-xs sm:text-sm md:text-base">HTML</p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img alt="CSS logo" src={cssIcon} className="w-1/2 md:w-3/5" />
               <p className="text-xs sm:text-sm md:text-base">CSS</p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
                 alt="BootStrap logo"
                 src={boostrapIcon}
@@ -139,7 +139,7 @@ function Home() {
               />
               <p className="text-xs sm:text-sm md:text-base">BootStrap</p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
                 alt="Tailwind logo"
                 src={tailwindIcon}
@@ -147,7 +147,7 @@ function Home() {
               />
               <p className="text-xs sm:text-sm md:text-base">Tailwind</p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
                 alt="Material UI logo"
                 src={materialUIIcon}
@@ -162,7 +162,7 @@ function Home() {
             Backend and Database
           </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
                 alt="PostgreSQL logo"
                 src={postgresqlIcon}
@@ -170,7 +170,7 @@ function Home() {
               />
               <p className="text-xs sm:text-sm md:text-base">PostgreSQL</p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
                 alt="NodeJS logo"
                 src={nodeJSIcon}
