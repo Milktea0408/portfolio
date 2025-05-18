@@ -69,7 +69,7 @@ function Navbar() {
             <img
               src={linkedinIcon}
               alt="LinkedIn"
-              className="h-4 w-4 hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
+              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
             />
           </a>
           <a
@@ -81,14 +81,14 @@ function Navbar() {
             <img
               src={githubIcon}
               alt="GitHub"
-              className="h-4 w-4 hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
+              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
             />
           </a>
           <a className="cursor-pointer" href="mailto:lucychen030408@gmail.com">
             <img
               src={emailIcon}
               alt="Email"
-              className="h-4 w-4 hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
+              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
             />
           </a>
         </section>
