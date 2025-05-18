@@ -68,7 +68,7 @@ function Home() {
           </h1>
 
           {/* js/ts, python, c, dash, java */}
-          <h2 className="text-lg md:text-xl text-lg md:text-xl text-gray-200 border-b border-gray-700 pb-2 mb-2">
+          <h2 className="text-lg md:text-xl text-gray-200 border-b border-gray-700 pb-2 mb-2">
             Programming Languages
           </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
@@ -111,7 +111,7 @@ function Home() {
           </div>
 
           {/* react, html, css, bootstrap, tailwind, material ui */}
-          <h2 className="text-lg md:text-xl text-lg md:text-xl text-gray-200 border-b border-gray-700 pb-2 mb-2">
+          <h2 className="text-lg md:text-xl text-gray-200 border-b border-gray-700 pb-2 mb-2">
             Frontend
           </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
@@ -158,7 +158,7 @@ function Home() {
           </div>
 
           {/* postgresql, node.js */}
-          <h2 className="text-lg md:text-xl text-lg md:text-xl text-gray-200 border-b border-gray-700 pb-2 mb-2">
+          <h2 className="text-lg md:text-xl text-gray-200 border-b border-gray-700 pb-2 mb-2">
             Backend and Database
           </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
