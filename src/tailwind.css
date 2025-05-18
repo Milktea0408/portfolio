@@ -6,6 +6,7 @@
 @layer base {
   html,
   body {
-    @apply bg-black text-white;
+    background-color: #212121;
+    color: white;
   }
 }

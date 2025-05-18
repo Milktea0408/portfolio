@@ -68,12 +68,14 @@ function Contact() {
         <h1 className="font-bold text-center text-5xl bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text mb-4">
           Contact me
         </h1>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto text-center mb-8">
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto text-center mb-8 text-base md:text-lg">
+          <b className="">Let's chat! </b>
           Let's chat! Have questions, feedback, or enquiries? Feel free to drop
           me a message below.
         </p>
 
-        <div className="w-full max-w-md bg-gray-800 rounded-xl shadow-lg p-6 md:p-8 border border-gray-700 relative overflow-hidden">
+        <div className="w-full max-w-md bg-gray-800 rounded-xl shadow-lg mb-6 md:mb-11 p-6 md:p-8 border border-gray-700 relative overflow-hidden">
+          {/* decor in top right corner of contact form */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-bl-full"></div>
           {/* contact form */}
           <form
