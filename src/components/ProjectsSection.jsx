@@ -76,7 +76,7 @@ function ProjectsSection() {
   return (
     <section>
       {/* Project carousel */}
-      <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-lg border border-gray-700">
+      <div className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-700">
         {/* Project content */}
         <div className="flex flex-col md:flex-row">
           {/* Project image */}
