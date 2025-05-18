@@ -59,7 +59,9 @@ function About() {
           </p>
           <section className="flex flex-col gap-5 content-around sm:flex-row">
             <div className="flex flex-col gap-2 mt-2">
-              <p>Favourite drinks</p>
+              <p className="text-xs sm:text-sm md:text-base">
+                Favourite drinks
+              </p>
               <img alt="interest image 1" />
               <p className="text-xs sm:text-sm md:text-base">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -67,7 +69,7 @@ function About() {
               </p>
             </div>
             <div className="flex flex-col gap-2 mt-2">
-              <p>Music</p>
+              <p className="text-xs sm:text-sm md:text-base">Music</p>
               <img alt="interest image 2" />
               <p className="text-xs sm:text-sm md:text-base">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -75,7 +77,7 @@ function About() {
               </p>
             </div>
             <div className="flex flex-col gap-2 mt-2">
-              <p>Movies</p>
+              <p className="text-xs sm:text-sm md:text-base">Movies</p>
               <img alt="interest image 3" />
               <p className="text-xs sm:text-sm md:text-base">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
