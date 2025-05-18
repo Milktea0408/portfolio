@@ -10,7 +10,7 @@ const projectsData = [
     description:
       "A responsive personal portfolio website built with React and Tailwind CSS.",
     image: "./src//assets/default_project_image.jpg", // Replace with your image path
-    technologies: ["React", "Tailwind CSS", "JavaScript"],
+    technologies: ["React", "Tailwind", "JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/Milktea0408/personal_website/",
     liveUrl: "https://yourportfolio.com",
   },
