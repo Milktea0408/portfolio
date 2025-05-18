@@ -24,21 +24,34 @@ function Home() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow mt-32 px-4 sm:px-8 md:px-12 lg:px-24 flex flex-col gap-6 md:gap-10">
-        <section className="flex flex-col-reverse justify-center items-center md:flex-row">
-          <img src={temp_avatar} alt="profile image" className="w-48 h-auto object-contain" />
+        <section
+          className="flex flex-col-reverse justify-center items-center md:flex-row
+                          bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg"
+        >
+          <img
+            src={temp_avatar}
+            alt="profile image"
+            className="w-48 h-auto object-contain"
+          />
           <div className="flex flex-col justify-center">
-            <h1 className="font-bold text-3xl text-center sm:text-4xl md:text-5xl md:text-left lg:text-6xl">
+            <h1
+              className="font-bold text-3xl text-center sm:text-4xl md:text-5xl md:text-left lg:text-6xl
+                bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+            >
               Lucy Chen
             </h1>
-            <p className="mt-2 text-gray-600 text-sm text-center md:text-base md:text-left">
+            <p className="mt-2 text-gray-400 text-sm text-center md:text-base md:text-left">
               Front-end Engineer | Web developer | Software Engineer
             </p>
           </div>
         </section>
 
         {/* Projects + links to each project made */}
-        <section>
-          <h1 className="font-bold text-2xl md:text-3xl mb-3 md:mb-5">
+        <section className="bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg">
+          <h1
+            className="font-bold text-2xl md:text-3xl mb-3 md:mb-5
+          bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+          >
             Projects
           </h1>
           {/* carousel slider of projects + links to github repos */}
@@ -46,13 +59,18 @@ function Home() {
         </section>
 
         {/* tech stack */}
-        <section>
-          <h1 className="font-bold text-2xl md:text-3xl mb-3 md:mb-5">
+        <section className="bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg">
+          <h1
+            className="font-bold text-2xl md:text-3xl mb-3 md:mb-
+          bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+          >
             Technical Skills
           </h1>
 
           {/* js/ts, python, c, dash, java */}
-          <h2 className="text-lg md:text-xl">Programming Languages</h2>
+          <h2 className="text-lg md:text-xl text-lg md:text-xl text-gray-200 border-b border-gray-700 pb-2 mb-2">
+            Programming Languages
+          </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
             <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
@@ -93,7 +111,9 @@ function Home() {
           </div>
 
           {/* react, html, css, bootstrap, tailwind, material ui */}
-          <h2 className="text-lg md:text-xl">Frontend</h2>
+          <h2 className="text-lg md:text-xl text-lg md:text-xl text-gray-200 border-b border-gray-700 pb-2 mb-2">
+            Frontend
+          </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
             <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
@@ -138,7 +158,9 @@ function Home() {
           </div>
 
           {/* postgresql, node.js */}
-          <h2 className="text-lg md:text-xl">Backend + Database</h2>
+          <h2 className="text-lg md:text-xl text-lg md:text-xl text-gray-200 border-b border-gray-700 pb-2 mb-2">
+            Backend and Database
+          </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
             <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-[#a9a9a9] rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
               <img
