@@ -5,11 +5,12 @@ import { useNavigate } from "react-router-dom";
 // import emailIcon from "../assets/email.svg";
 // import githubIcon from "../assets/github.svg";
 
-// import LinkedInIcon from "./icons/LinkedInIcon";
+import LinkedInIcon from "./icons/LinkedInIcon";
+import EmailIcon from "./icons/EmailIcon";
+import GithubIcon from "./icons/GithubIcon";
 
 // hamburger and X icon from npm library
 import { Menu, X } from "lucide-react";
-import LinkedInIcon from "./icons/LinkedInIcon";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -70,26 +71,21 @@ function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkedInIcon gradientId="linkedinGradientDesktop" />
+            <LinkedInIcon linkedinGradientId="linkedinGradientDesktop" />
           </a>
           <a
-            className="cursor-pointer"
+            className="group cursor-pointer h-4 w-4"
             href="https://github.com/Milktea0408"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {/* <img
-              src={githubIcon}
-              alt="GitHub"
-              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
-            /> */}
+            <GithubIcon githubGradientId="githubGradientMobile" />
           </a>
-          <a className="cursor-pointer" href="mailto:lucychen030408@gmail.com">
-            {/* <img
-              src={emailIcon}
-              alt="Email"
-              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
-            /> */}
+          <a
+            className="group cursor-pointer h-4 w-4"
+            href="mailto:lucychen030408@gmail.com"
+          >
+            <EmailIcon emailGradientId="emailGradientDesktop" />
           </a>
         </section>
       </nav>
@@ -142,25 +138,21 @@ function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LinkedInIcon gradientId="linkedinGradientMobile" />
+                <LinkedInIcon linkedinGradientId="linkedinGradientMobile" />
               </a>
               <a
+                className="group cursor-pointer h-4 w-4"
                 href="https://github.com/Milktea0408"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {/* <img
-                  src={githubIcon}
-                  alt="GitHub"
-                  className="h-4 w-4 hover:brightness-75 transition-all duration-100"
-                /> */}
+                <GithubIcon githubGradientId="githubGradientMobile" />
               </a>
-              <a href="mailto:lucychen030408@gmail.com">
-                {/* <img
-                  src={emailIcon}
-                  alt="Email"
-                  className="h-4 w-4 hover:brightness-75 transition-all duration-100"
-                /> */}
+              <a
+                className="group cursor-pointer h-4 w-4"
+                href="mailto:lucychen030408@gmail.com"
+              >
+                <EmailIcon emailGradientId="emailGradientMobile" />
               </a>
             </div>
           </div>
