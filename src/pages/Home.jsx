@@ -21,7 +21,7 @@ import temp_avatar from "../assets/temp_avatar.png";
 
 function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col text-gray-100">
       <Navbar />
       <main className="flex-grow mt-32 px-4 sm:px-8 md:px-12 lg:px-24 flex flex-col gap-6 md:gap-10">
         <section
