@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 function GithubIcon({ githubGradientId }) {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <svg
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
       className="h-full w-full transition-all duration-300"
@@ -31,7 +35,8 @@ function GithubIcon({ githubGradientId }) {
         c32.02,0,27.445,64,72.012,64c17.668,0,32,14.328,32,32v28c0,15.453-12.527,28-28.004,28c-1.688,0-3.277-0.344-4.887-0.656
         C81.203,474.613,0,374.926,0,256C0,114.617,114.617,0,256,0s256,114.617,256,256C512,364.41,444.508,456.848,349.328,494.16
         L349.328,494.16z"
-        className={`fill-white transition-all duration-300 group-hover:fill-[url(#${githubGradientId})]`}
+        fill={hovered ? `url(#${githubGradientId})` : "white"}
+        className={`transition-all duration-300`}
       />
     </svg>
   );
