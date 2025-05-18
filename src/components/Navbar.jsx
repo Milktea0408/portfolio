@@ -30,21 +30,21 @@ function Navbar() {
           <a
             href="/home"
             onClick={(e) => goToPage(e, "/home")}
-            className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
+            className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
           >
             Home
           </a>
           <a
             href="/about"
             onClick={(e) => goToPage(e, "/about")}
-            className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
+            className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
           >
             About
           </a>
           <a
             href="/contact"
             onClick={(e) => goToPage(e, "/contact")}
-            className="cursor-pointer text-sm hover:brightness-75 transition-all duration-100"
+            className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
           >
             Contact
           </a>
@@ -53,7 +53,7 @@ function Navbar() {
         {/* name in the middle */}
         <section
           onClick={(e) => goToPage(e, "/home")}
-          className="font-bold cursor-pointer hover:brightness-75 transition-all duration-100"
+          className="font-bold cursor-pointer hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
         >
           LUCY CHEN
         </section>
@@ -69,7 +69,7 @@ function Navbar() {
             <img
               src={linkedinIcon}
               alt="LinkedIn"
-              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
+              className="h-4 w-4 hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
             />
           </a>
           <a
@@ -81,14 +81,14 @@ function Navbar() {
             <img
               src={githubIcon}
               alt="GitHub"
-              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
+              className="h-4 w-4 hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
             />
           </a>
           <a className="cursor-pointer" href="mailto:lucychen030408@gmail.com">
             <img
               src={emailIcon}
               alt="Email"
-              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
+              className="h-4 w-4 hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
             />
           </a>
         </section>
@@ -100,7 +100,7 @@ function Navbar() {
         {/* name in top left corner */}
         <section
           onClick={(e) => goToPage(e, "/home")}
-          className="font-bold cursor-pointer hover:brightness-75 transition-all duration-100"
+          className="font-bold cursor-pointer hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
         >
           LUCY CHEN
         </section>
@@ -115,21 +115,21 @@ function Navbar() {
             <a
               href="/home"
               onClick={(e) => goToPage(e, "/home")}
-              className="cursor-pointer text-sm hover:brightness-75"
+              className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text"
             >
               Home
             </a>
             <a
               href="/about"
               onClick={(e) => goToPage(e, "/about")}
-              className="cursor-pointer text-sm hover:brightness-75"
+              className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text"
             >
               About
             </a>
             <a
               href="/contact"
               onClick={(e) => goToPage(e, "/contact")}
-              className="cursor-pointer text-sm hover:brightness-75"
+              className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text"
             >
               Contact
             </a>
@@ -139,17 +139,29 @@ function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={linkedinIcon} alt="LinkedIn" className="h-4 w-4" />
+                <img
+                  src={linkedinIcon}
+                  alt="LinkedIn"
+                  className="h-4 w-4 hover:brightness-75 transition-all duration-100"
+                />
               </a>
               <a
                 href="https://github.com/Milktea0408"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={githubIcon} alt="GitHub" className="h-4 w-4" />
+                <img
+                  src={githubIcon}
+                  alt="GitHub"
+                  className="h-4 w-4 hover:brightness-75 transition-all duration-100"
+                />
               </a>
               <a href="mailto:lucychen030408@gmail.com">
-                <img src={emailIcon} alt="Email" className="h-4 w-4" />
+                <img
+                  src={emailIcon}
+                  alt="Email"
+                  className="h-4 w-4 hover:brightness-75 transition-all duration-100"
+                />
               </a>
             </div>
           </div>
