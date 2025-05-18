@@ -154,14 +154,14 @@ function ProjectsSection() {
         <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 md:px-4">
           <button
             onClick={prevProject}
-            className="bg-gray-800/70 hover:bg-gray-700 text-white p-1 md:p-2 rounded-full border border-gray-700 hover:border-blue-500/50 transition-all hover:scale-110"
+            className="bg-gray-800/70 hover:bg-gray-700 text-white p-1 md:p-2 rounded-full border border-gray-700 transition-all hover:scale-110"
             aria-label="Previous project"
           >
             <ArrowLeft size={isMobile ? 16 : 24} />
           </button>
           <button
             onClick={nextProject}
-            className="bg-gray-800/70 hover:bg-gray-700 text-white p-1 md:p-2 rounded-full border border-gray-700 hover:border-blue-500/50 transition-all hover:scale-110"
+            className="bg-gray-800/70 hover:bg-gray-700 text-white p-1 md:p-2 rounded-full border border-gray-700 transition-all hover:scale-110"
             aria-label="Next project"
           >
             <ArrowRight size={isMobile ? 16 : 24} />
