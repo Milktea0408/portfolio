@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // icons from assets folder
-import linkedinIcon from "../assets/linkedin.svg";
-import emailIcon from "../assets/email.svg";
-import githubIcon from "../assets/github.svg";
+// import linkedinIcon from "../assets/linkedin.svg";
+// import emailIcon from "../assets/email.svg";
+// import githubIcon from "../assets/github.svg";
+
+// import LinkedInIcon from "./icons/LinkedInIcon";
+
 // hamburger and X icon from npm library
 import { Menu, X } from "lucide-react";
+import LinkedInIcon from "./icons/LinkedInIcon";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -22,7 +26,7 @@ function Navbar() {
 
   return (
     <>
-      {/* mobile neavbar - 'md' prefix for 768px and above only 
+      {/* mobile navbar - 'md' prefix for 768px and above only 
       hidden for screens lower than 768px */}
       <nav className="hidden md:bg-black md:fixed md:top-0 md:w-full md:text-white md:flex md:items-center md:justify-between md:px-8 md:py-4 z-10">
         {/* navlinks */}
@@ -61,16 +65,12 @@ function Navbar() {
         {/* socials */}
         <section className="flex gap-5">
           <a
-            className="cursor-pointer"
+            className="group cursor-pointer h-4 w-4"
             href="https://linkedin.com/in/lucy-c-791635216"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src={linkedinIcon}
-              alt="LinkedIn"
-              className="h-4 w-4 hover:brightness-75 transition-all duration-100"
-            />
+            <LinkedInIcon gradientId="linkedinGradientDesktop" />
           </a>
           <a
             className="cursor-pointer"
@@ -78,18 +78,18 @@ function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            {/* <img
               src={githubIcon}
               alt="GitHub"
               className="h-4 w-4 hover:brightness-75 transition-all duration-100"
-            />
+            /> */}
           </a>
           <a className="cursor-pointer" href="mailto:lucychen030408@gmail.com">
-            <img
+            {/* <img
               src={emailIcon}
               alt="Email"
               className="h-4 w-4 hover:brightness-75 transition-all duration-100"
-            />
+            /> */}
           </a>
         </section>
       </nav>
@@ -133,35 +133,34 @@ function Navbar() {
             >
               Contact
             </a>
+
+            {/* socials */}
             <div className="flex gap-3 mt-2">
               <a
+                className="group cursor-pointer h-4 w-4"
                 href="https://linkedin.com/in/lucy-c-791635216"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src={linkedinIcon}
-                  alt="LinkedIn"
-                  className="h-4 w-4 hover:brightness-75 transition-all duration-100"
-                />
+                <LinkedInIcon gradientId="linkedinGradientMobile" />
               </a>
               <a
                 href="https://github.com/Milktea0408"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                {/* <img
                   src={githubIcon}
                   alt="GitHub"
                   className="h-4 w-4 hover:brightness-75 transition-all duration-100"
-                />
+                /> */}
               </a>
               <a href="mailto:lucychen030408@gmail.com">
-                <img
+                {/* <img
                   src={emailIcon}
                   alt="Email"
                   className="h-4 w-4 hover:brightness-75 transition-all duration-100"
-                />
+                /> */}
               </a>
             </div>
           </div>
