@@ -79,7 +79,7 @@ function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GithubIcon githubGradientId="githubGradientMobile" />
+            <GithubIcon githubGradientId="githubGradientDesktop" />
           </a>
           <a
             className="group cursor-pointer h-4 w-4"

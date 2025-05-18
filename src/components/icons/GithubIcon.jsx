@@ -1,6 +1,6 @@
 import React from "react";
 
-function LinkedInIcon({ githubGradientId }) {
+function GithubIcon({ githubGradientId }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -37,4 +37,4 @@ function LinkedInIcon({ githubGradientId }) {
   );
 }
 
-export default LinkedInIcon;
+export default GithubIcon;
