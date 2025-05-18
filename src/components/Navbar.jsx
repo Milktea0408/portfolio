@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-// icons 
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+// icons
 import LinkedInIcon from "./icons/LinkedInIcon";
 import EmailIcon from "./icons/EmailIcon";
 import GithubIcon from "./icons/GithubIcon";
@@ -10,8 +10,16 @@ import { Menu, X } from "lucide-react";
 
 function Navbar() {
   const navigate = useNavigate();
+  const location = useLocation();
   // usestate for opening/closing menu
   const [menuOpen, setMenuOpen] = useState(false);
+  // track current page
+  const [currentPath, setCurrentPath] = useState("/");
+
+  // Update currentPath when location changes
+  useEffect(() => {
+    setCurrentPath(location.pathname);
+  }, [location]);
 
   // a fuction to go to a specified route/page
   function goToPage(e, page) {
@@ -21,31 +29,43 @@ function Navbar() {
     setMenuOpen(false);
   }
 
+  // Helper function to determine if a link is active
+  const isActive = (path) => {
+    return currentPath === path;
+  };
+
+  // active link class with the gradient effect always applied
+  const activeClass =
+    "cursor-pointer text-sm bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text";
+
+  // non-active link class with hover effect
+  const inactiveClass =
+    "cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100";
+
   return (
     <>
-      {/* mobile navbar - 'md' prefix for 768px and above only 
-      hidden for screens lower than 768px */}
+      {/* mobile navbar */}
       <nav className="hidden md:bg-[#212121] md:fixed md:top-0 md:w-full md:text-white md:flex md:items-center md:justify-between md:px-8 md:py-4 z-10">
         {/* navlinks */}
         <section className="flex gap-5">
           <a
             href="/home"
             onClick={(e) => goToPage(e, "/home")}
-            className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
+            className={isActive("/home") ? activeClass : inactiveClass}
           >
             Home
           </a>
           <a
             href="/about"
             onClick={(e) => goToPage(e, "/about")}
-            className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
+            className={isActive("/about") ? activeClass : inactiveClass}
           >
             About
           </a>
           <a
             href="/contact"
             onClick={(e) => goToPage(e, "/contact")}
-            className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
+            className={isActive("/contact") ? activeClass : inactiveClass}
           >
             Contact
           </a>
@@ -107,21 +127,21 @@ function Navbar() {
             <a
               href="/home"
               onClick={(e) => goToPage(e, "/home")}
-              className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text"
+              className={isActive("/home") ? activeClass : inactiveClass}
             >
               Home
             </a>
             <a
               href="/about"
               onClick={(e) => goToPage(e, "/about")}
-              className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text"
+              className={isActive("/about") ? activeClass : inactiveClass}
             >
               About
             </a>
             <a
               href="/contact"
               onClick={(e) => goToPage(e, "/contact")}
-              className="cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text"
+              className={isActive("/contact") ? activeClass : inactiveClass}
             >
               Contact
             </a>
