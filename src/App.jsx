@@ -1,4 +1,4 @@
-import { BrowserRouter, useNavigate } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Pages from "./pages/Pages";
 
 function App() {

@@ -1,7 +1,3 @@
-// import linkedinIcon from "../assets/linkedin.svg";
-// import emailIcon from "../assets/email.svg";
-// import githubIcon from "../assets/github.svg";
-
 import LinkedInIcon from "./icons/LinkedInIcon";
 import EmailIcon from "./icons/EmailIcon";
 import GithubIcon from "./icons/GithubIcon";
