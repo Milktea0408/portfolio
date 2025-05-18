@@ -35,7 +35,7 @@ function Home() {
           />
           <div className="flex flex-col justify-center">
             <h1
-              className="font-bold text-3xl text-center sm:text-4xl md:text-5xl md:text-left lg:text-6xl
+              className="font-bold text-3xl pb-2 text-center sm:text-4xl md:text-5xl md:text-left lg:text-6xl
                 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
             >
               Lucy Chen

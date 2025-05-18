@@ -76,42 +76,42 @@ function ProjectsSection() {
   return (
     <section>
       {/* Project carousel */}
-      <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+      <div className="relative bg-gray-100 rounded-xl overflow-hidden shadow-lg border border-gray-700">
         {/* Project content */}
         <div className="flex flex-col md:flex-row">
           {/* Project image */}
-          <div className="w-full md:w-1/2 h-48 md:h-80 bg-gray-200 relative">
+          <div className="w-full md:w-1/2 h-48 md:h-80 bg-gray-900 relative">
             {currentProject.image ? (
               <img
                 src={currentProject.image}
                 alt={currentProject.title}
-                className="w-full h-full object-contain text-black"
+                className="w-full h-full object-contain"
               />
             ) : (
-              <div className="w-full h-full flex items-center justify-center bg-gray-300">
+              <div className="w-full h-full flex items-center justify-center bg-gray-900">
                 <p className="text-gray-600">Project Screenshot</p>
               </div>
             )}
           </div>
 
           {/* Project details */}
-          <div className="w-full md:w-1/2 p-6 flex flex-col justify-between">
+          <div className="w-full md:w-1/2 p-6 flex flex-col justify-between bg-gradient-to-br from-gray-800 to-gray-900">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 text-black">
+              <h2 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
                 {currentProject.title}
               </h2>
-              <p className="text-gray-700 mb-4">{currentProject.description}</p>
+              <p className="text-gray-300 mb-4">{currentProject.description}</p>
 
               {/* Technologies used */}
               <div className="mb-4">
-                <h3 className="text-sm font-semibold mb-2 text-black">
+                <h3 className="text-sm font-semibold mb-2 text-gray-200">
                   Tech Stack:
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {currentProject.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded-full"
+                      className="text-xs bg-gray-700 text-gray-200 px-2 py-1 rounded-full border border-gray-600 hover:border-blue-500/50 transition-colors"
                     >
                       {tech}
                     </span>
@@ -128,7 +128,7 @@ function ProjectsSection() {
                   href={currentProject.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-sm bg-black text-white px-3 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                  className="flex items-center gap-1 text-sm bg-gray-700 text-white px-3 py-2 rounded-md hover:bg-gray-600 transition-colors border border-gray-600 hover:border-gray-500"
                 >
                   <Github size={16} />
                   <span>GitHub</span>
@@ -140,7 +140,7 @@ function ProjectsSection() {
                   href={currentProject.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-sm bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                  className="flex items-center gap-1 text-sm bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-md hover:from-blue-500 hover:to-purple-500 transition-colors"
                 >
                   <ExternalLink size={16} />
                   <span>Live Demo</span>
@@ -154,14 +154,14 @@ function ProjectsSection() {
         <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 md:px-4">
           <button
             onClick={prevProject}
-            className="bg-black/50 hover:bg-black/70 text-white p-1 md:p-2 rounded-full"
+            className="bg-gray-800/70 hover:bg-gray-700 text-white p-1 md:p-2 rounded-full border border-gray-700 hover:border-blue-500/50 transition-all hover:scale-110"
             aria-label="Previous project"
           >
             <ArrowLeft size={isMobile ? 16 : 24} />
           </button>
           <button
             onClick={nextProject}
-            className="bg-black/50 hover:bg-black/70 text-white p-1 md:p-2 rounded-full"
+            className="bg-gray-800/70 hover:bg-gray-700 text-white p-1 md:p-2 rounded-full border border-gray-700 hover:border-blue-500/50 transition-all hover:scale-110"
             aria-label="Next project"
           >
             <ArrowRight size={isMobile ? 16 : 24} />
@@ -175,8 +175,10 @@ function ProjectsSection() {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full ${
-                  index === currentIndex ? "bg-black" : "bg-gray-400"
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === currentIndex
+                    ? "bg-gradient-to-r from-blue-400 to-purple-500 w-4"
+                    : "bg-gray-600 hover:bg-gray-500"
                 }`}
                 aria-label={`Go to project ${index + 1}`}
               />
