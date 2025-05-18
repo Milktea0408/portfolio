@@ -35,7 +35,7 @@ function Home() {
           />
           <div className="flex flex-col justify-center">
             <h1
-              className="font-bold text-3xl pb-2 text-center sm:text-4xl md:text-5xl md:text-left lg:text-6xl
+              className="font-bold text-5xl pb-2 text-center sm:text-6xl md:text-7xl md:text-left lg:text-8xl
                 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
             >
               Lucy Chen
@@ -62,7 +62,7 @@ function Home() {
         <section className="bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg">
           <h1
             className="font-bold text-2xl md:text-3xl mb-3 md:mb-5
-          bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+    bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
           >
             Technical Skills
           </h1>
@@ -72,41 +72,61 @@ function Home() {
             Programming Languages
           </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img
-                alt="Javascript logo"
-                src={javascriptIcon}
-                className="w-1/2 md:w-3/5"
-              />
-              <p className="text-xs sm:text-sm md:text-base">Javascript</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img
+                  alt="Javascript logo"
+                  src={javascriptIcon}
+                  className="w-full"
+                />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-blue-400 transition-colors duration-300">
+                Javascript
+              </p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img
-                alt="TypeScript logo"
-                src={typescriptIcon}
-                className="w-1/2 md:w-3/5"
-              />
-              <p className="text-xs sm:text-sm md:text-base">Typescript</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img
+                  alt="TypeScript logo"
+                  src={typescriptIcon}
+                  className="w-full"
+                />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-blue-400 transition-colors duration-300">
+                Typescript
+              </p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img
-                alt="Python logo"
-                src={pythonIcon}
-                className="w-1/2 md:w-3/5"
-              />
-              <p className="text-xs sm:text-sm md:text-base">Python</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img alt="Python logo" src={pythonIcon} className="w-full" />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-purple-400 transition-colors duration-300">
+                Python
+              </p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="C logo" src={cIcon} className="w-1/2 md:w-3/5" />
-              <p className="text-xs sm:text-sm md:text-base">C</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img alt="C logo" src={cIcon} className="w-full" />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-purple-400 transition-colors duration-300">
+                C
+              </p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="Java logo" src={javaIcon} className="w-1/2 md:w-3/5" />
-              <p className="text-xs sm:text-sm md:text-base">Java</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img alt="Java logo" src={javaIcon} className="w-full" />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-blue-400 transition-colors duration-300">
+                Java
+              </p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="Bash logo" src={bashIcon} className="w-1/2 md:w-3/5" />
-              <p className="text-xs sm:text-sm md:text-base">Bash</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img alt="Bash logo" src={bashIcon} className="w-full" />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-purple-400 transition-colors duration-300">
+                Bash
+              </p>
             </div>
           </div>
 
@@ -115,45 +135,65 @@ function Home() {
             Frontend
           </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img
-                alt="React logo"
-                src={reactIcon}
-                className="w-1/2 md:w-3/5"
-              />
-              <p className="text-xs sm:text-sm md:text-base">React</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img alt="React logo" src={reactIcon} className="w-full" />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-blue-400 transition-colors duration-300">
+                React
+              </p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="HTML logo" src={html5Icon} className="w-1/2 md:w-3/5" />
-              <p className="text-xs sm:text-sm md:text-base">HTML</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img alt="HTML logo" src={html5Icon} className="w-full" />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-blue-400 transition-colors duration-300">
+                HTML
+              </p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img alt="CSS logo" src={cssIcon} className="w-1/2 md:w-3/5" />
-              <p className="text-xs sm:text-sm md:text-base">CSS</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img alt="CSS logo" src={cssIcon} className="w-full" />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-purple-400 transition-colors duration-300">
+                CSS
+              </p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img
-                alt="BootStrap logo"
-                src={boostrapIcon}
-                className="w-1/2 md:w-3/5"
-              />
-              <p className="text-xs sm:text-sm md:text-base">BootStrap</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img
+                  alt="BootStrap logo"
+                  src={boostrapIcon}
+                  className="w-full"
+                />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-purple-400 transition-colors duration-300">
+                BootStrap
+              </p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img
-                alt="Tailwind logo"
-                src={tailwindIcon}
-                className="w-1/2 md:w-3/5"
-              />
-              <p className="text-xs sm:text-sm md:text-base">Tailwind</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img
+                  alt="Tailwind logo"
+                  src={tailwindIcon}
+                  className="w-full"
+                />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-blue-400 transition-colors duration-300">
+                Tailwind
+              </p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img
-                alt="Material UI logo"
-                src={materialUIIcon}
-                className="w-1/2 md:w-3/5"
-              />
-              <p className="text-xs sm:text-sm md:text-base">Material UI</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img
+                  alt="Material UI logo"
+                  src={materialUIIcon}
+                  className="w-full"
+                />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-purple-400 transition-colors duration-300">
+                Material UI
+              </p>
             </div>
           </div>
 
@@ -162,21 +202,25 @@ function Home() {
             Backend and Database
           </h2>
           <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img
-                alt="PostgreSQL logo"
-                src={postgresqlIcon}
-                className="w-1/2 md:w-3/5"
-              />
-              <p className="text-xs sm:text-sm md:text-base">PostgreSQL</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img
+                  alt="PostgreSQL logo"
+                  src={postgresqlIcon}
+                  className="w-full"
+                />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-blue-400 transition-colors duration-300">
+                PostgreSQL
+              </p>
             </div>
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center hover:scale-110 duration-300">
-              <img
-                alt="NodeJS logo"
-                src={nodeJSIcon}
-                className="w-1/2 md:w-3/5"
-              />
-              <p className="text-xs sm:text-sm md:text-base">NodeJS</p>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 border border-gray-600 group">
+              <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
+                <img alt="NodeJS logo" src={nodeJSIcon} className="w-full" />
+              </div>
+              <p className="text-xs sm:text-sm md:text-base mt-2 group-hover:text-purple-400 transition-colors duration-300">
+                NodeJS
+              </p>
             </div>
           </div>
         </section>
