@@ -50,7 +50,7 @@ function Home() {
         <section className="bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg">
           <h1
             className="font-bold text-2xl md:text-3xl mb-3 md:mb-5
-          bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+              bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
           >
             Projects
           </h1>

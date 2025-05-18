@@ -17,8 +17,11 @@ function About() {
       <Navbar />
       <main className="flex-grow mt-32 px-4 sm:px-8 md:px-12 lg:px-24 flex flex-col gap-6 md:gap-10">
         {/* about yourself section */}
-        <section>
-          <h1 className="font-bold text-2xl md:text-3xl mb-3 md:mb-5">
+        <section className="bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg">
+          <h1
+            className="font-bold text-2xl md:text-3xl mb-3 md:mb-5
+            bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+          >
             A Little Bit About Me
           </h1>
           <div className="flex flex-col gap-5 sm:flex-row sm:gap-20">
@@ -43,8 +46,11 @@ function About() {
         </section>
 
         {/* hobbies/ interests section */}
-        <section>
-          <h1 className="font-bold text-2xl md:text-3xl mb-3 md:mb-5">
+        <section className="bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg">
+          <h1
+            className="font-bold text-2xl md:text-3xl mb-3 md:mb-5
+            bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+          >
             Hobbies and Interests
           </h1>
           <p className="text-xs my-4 sm:text-sm md:text-base">
