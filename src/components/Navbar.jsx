@@ -44,7 +44,7 @@ function Navbar() {
 
   return (
     <>
-      {/* mobile navbar */}
+      {/* desktop navbar */}
       <nav className="hidden md:bg-[#212121] md:fixed md:top-0 md:w-full md:text-white md:flex md:items-center md:justify-between md:px-8 md:py-4 z-10">
         {/* navlinks */}
         <section className="flex gap-5">
@@ -106,9 +106,8 @@ function Navbar() {
         </section>
       </nav>
 
-      {/* mobile navbar - 'md:hidden' means to hide this section
-      when the screen is above 768px */}
-      <nav className="md:hidden bg-black fixed top-0 w-full text-white flex items-center justify-between px-4 py-3 z-10">
+      {/* mobile navbar */}
+      <nav className="md:hidden bg-[#212121] fixed top-0 w-full text-white flex items-center justify-between px-4 py-3 z-10">
         {/* name in top left corner */}
         <section
           onClick={(e) => goToPage(e, "/home")}
@@ -123,7 +122,7 @@ function Navbar() {
 
         {/* menu dropdown */}
         {menuOpen && (
-          <div className="md:hidden fixed top-12 left-0 w-full bg-black text-white flex flex-col gap-4 px-4 py-3 z-10">
+          <div className="md:hidden fixed top-12 left-0 w-full bg-[#212121] text-white flex flex-col gap-4 px-4 py-3 z-10">
             <a
               href="/home"
               onClick={(e) => goToPage(e, "/home")}
