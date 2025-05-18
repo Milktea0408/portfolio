@@ -24,14 +24,14 @@ function Home() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow mt-32 px-4 sm:px-8 md:px-12 lg:px-24 flex flex-col gap-6 md:gap-10">
-        <section className="flex flex-col-reverse justify-center md:flex-row">
+        <section className="flex flex-col-reverse justify-center items-center md:flex-row">
           <img src={temp_avatar} alt="profile image" className="w-48 h-auto object-contain" />
           <div className="flex flex-col justify-center">
-            <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="font-bold text-3xl text-center sm:text-4xl md:text-5xl md:text-left lg:text-6xl">
               Lucy Chen
             </h1>
-            <p className="mt-2 text-gray-600 text-sm md:text-base">
-              Front-end and web developer | Software Engineer
+            <p className="mt-2 text-gray-600 text-sm text-center md:text-base md:text-left">
+              Front-end Engineer | Web developer | Software Engineer
             </p>
           </div>
         </section>
