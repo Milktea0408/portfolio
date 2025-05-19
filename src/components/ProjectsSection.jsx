@@ -29,7 +29,8 @@ const projectsData = [
     id: 3,
     title: "Weather Tracking App",
     description:
-      "A weather app that fetches and displays weather for a given location.",
+      // "A weather app that fetches and displays weather for a given location.",
+      "Coming soon!",
     image: "./src//assets/default_project_image.jpg", // Replace with your image path
     technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
     // githubUrl: "https://github.com/yourusername/task-app",
