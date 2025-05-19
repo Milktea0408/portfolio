@@ -32,8 +32,10 @@ const projectsData = [
       "A weather app that fetches and displays weather for a given location.",
     image: "./src//assets/default_project_image.jpg", // Replace with your image path
     technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
-    githubUrl: "https://github.com/yourusername/task-app",
-    liveUrl: "https://yourtaskapp.com",
+    // githubUrl: "https://github.com/yourusername/task-app",
+    githubUrl: null,
+    // liveUrl: "https://yourtaskapp.com",
+    liveUrl: null,
   },
   // Add more projects as needed
 ];
