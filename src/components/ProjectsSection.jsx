@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight, Github, ExternalLink } from "lucide-react";
 
-// Sample projects data - replace with your own projects
+// projects data
 const projectsData = [
   {
     // personal website
