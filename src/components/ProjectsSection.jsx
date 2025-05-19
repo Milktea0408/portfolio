@@ -27,11 +27,11 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Task Management App",
+    title: "Weather Tracking App",
     description:
-      "A productivity app that helps users organize tasks and track progress.",
+      "A weather app that fetches and displays weather for a given location.",
     image: "./src//assets/default_project_image.jpg", // Replace with your image path
-    technologies: ["React", "Firebase", "Material UI"],
+    technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
     githubUrl: "https://github.com/yourusername/task-app",
     liveUrl: "https://yourtaskapp.com",
   },
