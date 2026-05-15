@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import temp_avatar from "../assets/temp_avatar.png";
+import temp_avatar from "../assets/favicon.svg";
 
 function About() {
   const navigate = useNavigate();
@@ -23,11 +23,13 @@ function About() {
               <em className="italic text-cream/50">about me.</em>
             </h1>
           </div>
-          <img
-            src={temp_avatar}
-            alt="Lucy Chen"
-            className="hidden md:block w-48 h-48 object-cover rounded-lg border border-white/[0.08] grayscale-[25%]"
-          />
+          <div className="hidden md:block w-48 h-48 rounded-lg overflow-hidden border border-white/[0.08] grayscale-[25%]">
+            <img
+              src={temp_avatar}
+              alt="Lucy Chen"
+              className="w-full h-full object-contain p-2"
+            />
+          </div>
         </header>
 
         {/* BIO */}
@@ -87,7 +89,6 @@ function About() {
               </div>
             ))}
           </div>
-
         </section>
       </main>
 

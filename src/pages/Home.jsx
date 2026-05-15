@@ -2,7 +2,7 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import ProjectsSection from "../components/home/ProjectsSection";
 import TechStack from "../components/home/TechStack";
-import temp_avatar from "../assets/temp_avatar.png";
+import temp_avatar from "../assets/favicon.svg";
 
 function Home() {
   return (
@@ -29,7 +29,7 @@ function Home() {
             <img
               src={temp_avatar}
               alt="Lucy Chen"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain p-4"
             />
           </div>
         </header>
