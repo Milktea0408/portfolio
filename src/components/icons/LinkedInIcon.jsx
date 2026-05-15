@@ -11,18 +11,6 @@ function LinkedInIcon({ linkedinGradientId }) {
       viewBox="0 0 512 512"
       className="h-full w-full transition-all duration-300"
     >
-      <defs>
-        <linearGradient
-          id={linkedinGradientId}
-          x1="0%"
-          y1="0%"
-          x2="100%"
-          y2="0%"
-        >
-          <stop offset="0%" stopColor="#60a5fa" /> {/* blue-400 */}
-          <stop offset="100%" stopColor="#a78bfa" /> {/* purple-500 */}
-        </linearGradient>
-      </defs>
       <path
         d="M472,480h-79.991c-19.375,0-35.523-13.758-39.211-32.04
         c-0.273,0-0.523,0.039-0.797,0.039V303.205c0-17.242-14.328-31.196-31.999-31.196c-17.672,0-32,13.954-32,31.196v136.38v0.43
@@ -45,8 +33,8 @@ function LinkedInIcon({ linkedinGradientId }) {
         c0.539,2.602,0.805,5.328,0.805,8.094v160.006C512,462.101,494.102,480,472,480L472,480z M208.006,447.999c8.824,0,16,7.172,16,16
         c0,8.845-7.175,16.001-16,16.001c-8.844,0-16.004-7.156-16.004-16.001C192.002,455.171,199.163,447.999,208.006,447.999
         L208.006,447.999z"
-        fill={hovered ? `url(#${linkedinGradientId})` : "white"}
-        className={`transition-all duration-300`}
+        fill={hovered ? "#f0ede6" : "rgba(240,237,230,0.4)"}
+        className="transition-all duration-300"
       />
     </svg>
   );

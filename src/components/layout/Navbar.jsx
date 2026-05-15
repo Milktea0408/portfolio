@@ -1,173 +1,158 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-// icons
+import { Menu, X } from "lucide-react";
 import LinkedInIcon from "../icons/LinkedInIcon";
 import EmailIcon from "../icons/EmailIcon";
 import GithubIcon from "../icons/GithubIcon";
 
-// hamburger and X icon from npm library
-import { Menu, X } from "lucide-react";
-
 function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
-  // usestate for opening/closing menu
   const [menuOpen, setMenuOpen] = useState(false);
-  // track current page
+  const [scrolled, setScrolled] = useState(false);
   const [currentPath, setCurrentPath] = useState(location.pathname);
 
-  // Update currentPath when location changes
   useEffect(() => {
     setCurrentPath(location.pathname);
   }, [location]);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-  // a fuction to go to a specified route/page
   function goToPage(e, page) {
     e.preventDefault();
     navigate(page);
-    // close menu after going to the other page
     setMenuOpen(false);
   }
 
-  // Helper function to determine if a link is active
-  const isActive = (path) => {
-    return currentPath === path;
-  };
+  const isActive = (path) => currentPath === path;
 
-  // active link class with the gradient effect always applied
-  const activeClass =
-    "cursor-pointer text-sm bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text";
+  const linkBase =
+    "font-mono text-[0.65rem] tracking-[0.12em] uppercase transition-colors duration-200";
+  const activeLink = `${linkBase} text-cream`;
+  const inactiveLink = `${linkBase} text-cream/40 hover:text-cream`;
 
-  // non-active link class with hover effect
-  const inactiveClass =
-    "cursor-pointer text-sm hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100";
+  const SocialIcon = ({ href, children }) => (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-4 h-4 opacity-40 hover:opacity-100 transition-opacity duration-200"
+    >
+      {children}
+    </a>
+  );
 
   return (
     <>
-      {/* desktop navbar */}
-      <nav className="hidden md:bg-[#212121] md:fixed md:top-0 md:w-full md:text-white md:flex md:items-center md:justify-between md:px-8 md:py-4 z-10">
-        {/* navlinks */}
-        <section className="flex gap-5">
-          <a
-            href="/"
+      {/* Desktop */}
+      <nav
+        className={`hidden md:flex fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-ink/90 backdrop-blur-md border-b border-white/5" : "bg-transparent"}`}
+      >
+        <div className="w-full max-w-[1100px] mx-auto flex items-center justify-between px-8 py-5">
+          {/* Links left */}
+          <div className="flex gap-8">
+            {[
+              ["Home", "/"],
+              ["About", "/about"],
+              ["Contact", "/contact"],
+            ].map(([label, path]) => (
+              <a
+                key={path}
+                href={path}
+                onClick={(e) => goToPage(e, path)}
+                className={isActive(path) ? activeLink : inactiveLink}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+
+          {/* Logo center */}
+          <button
             onClick={(e) => goToPage(e, "/")}
-            className={isActive("/") ? activeClass : inactiveClass}
+            className="font-display italic text-[1.05rem] text-cream hover:text-cream/60 transition-colors duration-200 tracking-wide"
           >
-            Home
-          </a>
-          <a
-            href="/about"
-            onClick={(e) => goToPage(e, "/about")}
-            className={isActive("/about") ? activeClass : inactiveClass}
-          >
-            About
-          </a>
-          <a
-            href="/contact"
-            onClick={(e) => goToPage(e, "/contact")}
-            className={isActive("/contact") ? activeClass : inactiveClass}
-          >
-            Contact
-          </a>
-        </section>
+            Lucy Chen
+          </button>
 
-        {/* name in the middle */}
-        <section
-          onClick={(e) => goToPage(e, "/")}
-          className="font-bold cursor-pointer hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
-        >
-          LUCY CHEN
-        </section>
-
-        {/* socials */}
-        <section className="flex gap-5">
-          <a
-            className="group cursor-pointer h-4 w-4"
-            href="https://linkedin.com/in/lucy-c-791635216"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedInIcon linkedinGradientId="linkedinGradientDesktop" />
-          </a>
-          <a
-            className="group cursor-pointer h-4 w-4"
-            href="https://github.com/Milktea0408"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GithubIcon githubGradientId="githubGradientDesktop" />
-          </a>
-          <a
-            className="group cursor-pointer h-4 w-4"
-            href="mailto:lucychen030408@gmail.com"
-          >
-            <EmailIcon emailGradientId="emailGradientDesktop" />
-          </a>
-        </section>
+          {/* Socials right */}
+          <div className="flex gap-4 items-center">
+            <SocialIcon href="https://linkedin.com/in/lucy-c-791635216">
+              <LinkedInIcon linkedinGradientId="nav-d-li" />
+            </SocialIcon>
+            <SocialIcon href="https://github.com/Milktea0408">
+              <GithubIcon githubGradientId="nav-d-gh" />
+            </SocialIcon>
+            <a
+              href="mailto:lucychen030408@gmail.com"
+              className="w-4 h-4 opacity-40 hover:opacity-100 transition-opacity duration-200"
+            >
+              <EmailIcon emailGradientId="nav-d-em" />
+            </a>
+          </div>
+        </div>
       </nav>
 
-      {/* mobile navbar */}
-      <nav className="md:hidden bg-[#212121] fixed top-0 w-full text-white flex items-center justify-between px-4 py-3 z-10">
-        {/* name in top left corner */}
-        <section
-          onClick={(e) => goToPage(e, "/")}
-          className="font-bold cursor-pointer hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
-        >
-          LUCY CHEN
-        </section>
-        {/* hamburger icon - opens up a menu and toggles between them */}
-        <button onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+      {/* Mobile */}
+      <nav
+        className={`md:hidden fixed top-0 w-full z-50 bg-ink/95 backdrop-blur-md border-b border-white/5`}
+      >
+        <div className="flex items-center justify-between px-5 py-4">
+          <button
+            onClick={(e) => goToPage(e, "/")}
+            className="font-display italic text-cream text-base hover:text-cream/60 transition-colors"
+          >
+            Lucy Chen
+          </button>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-cream/60 hover:text-cream transition-colors"
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
 
-        {/* menu dropdown */}
         {menuOpen && (
-          <div className="md:hidden fixed top-12 left-0 w-full bg-[#212121] text-white flex flex-col gap-4 px-4 py-3 z-10">
-            <a
-              href="/"
-              onClick={(e) => goToPage(e, "/")}
-              className={isActive("/") ? activeClass : inactiveClass}
-            >
-              Home
-            </a>
-            <a
-              href="/about"
-              onClick={(e) => goToPage(e, "/about")}
-              className={isActive("/about") ? activeClass : inactiveClass}
-            >
-              About
-            </a>
-            <a
-              href="/contact"
-              onClick={(e) => goToPage(e, "/contact")}
-              className={isActive("/contact") ? activeClass : inactiveClass}
-            >
-              Contact
-            </a>
-
-            {/* socials */}
-            <div className="flex gap-3 mt-2">
+          <div className="px-5 pb-5 pt-1 flex flex-col gap-5 border-t border-white/5">
+            {[
+              ["Home", "/"],
+              ["About", "/about"],
+              ["Contact", "/contact"],
+            ].map(([label, path]) => (
               <a
-                className="group cursor-pointer h-4 w-4"
+                key={path}
+                href={path}
+                onClick={(e) => goToPage(e, path)}
+                className={isActive(path) ? activeLink : inactiveLink}
+              >
+                {label}
+              </a>
+            ))}
+            <div className="flex gap-4 mt-1">
+              <a
                 href="https://linkedin.com/in/lucy-c-791635216"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-4 h-4 opacity-40 hover:opacity-100 transition-opacity"
               >
-                <LinkedInIcon linkedinGradientId="linkedinGradientMobile" />
+                <LinkedInIcon linkedinGradientId="nav-m-li" />
               </a>
               <a
-                className="group cursor-pointer h-4 w-4"
                 href="https://github.com/Milktea0408"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-4 h-4 opacity-40 hover:opacity-100 transition-opacity"
               >
-                <GithubIcon githubGradientId="githubGradientMobile" />
+                <GithubIcon githubGradientId="nav-m-gh" />
               </a>
               <a
-                className="group cursor-pointer h-4 w-4"
                 href="mailto:lucychen030408@gmail.com"
+                className="w-4 h-4 opacity-40 hover:opacity-100 transition-opacity"
               >
-                <EmailIcon emailGradientId="emailGradientMobile" />
+                <EmailIcon emailGradientId="nav-m-em" />
               </a>
             </div>
           </div>

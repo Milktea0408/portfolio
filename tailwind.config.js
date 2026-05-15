@@ -1,8 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        display: ["Instrument Serif", "serif"],
+        mono: ["DM Mono", "monospace"],
+      },
+      colors: {
+        cream: "#f0ede6",
+        ink: "#0a0a0a",
+      },
+    },
   },
   plugins: [],
 };

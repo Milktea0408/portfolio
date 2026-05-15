@@ -6,50 +6,61 @@ import temp_avatar from "../assets/temp_avatar.png";
 
 function Home() {
   return (
-    <div className="min-h-screen flex flex-col text-gray-100">
-      
+    <div className="min-h-screen bg-ink text-cream relative overflow-x-hidden">
       <Navbar />
-      
-      {/* name + profile pic */}
-      <main className="flex-grow mt-32 px-4 sm:px-8 md:px-12 lg:px-24 flex flex-col gap-6 md:gap-10">
-        <section
-          className="flex flex-col-reverse justify-center items-center md:flex-row
-                          bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg"
-        >
-          <img
-            src={temp_avatar}
-            alt="profile image"
-            className="w-48 h-auto object-contain"
-          />
-          <div className="flex flex-col justify-center">
-            <h1
-              className="font-bold text-5xl pb-2 text-center sm:text-6xl md:text-7xl md:text-left lg:text-8xl
-                bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
-            >
-              Lucy Chen
+
+      <main className="max-w-[1100px] mx-auto px-5 md:px-8 pb-16">
+        {/* HEADING */}
+        <header className="pt-36 md:pt-44 pb-14 border-b border-white/[0.07] flex flex-col-reverse md:flex-row md:items-end md:justify-between gap-8">
+          <div>
+            <p className="font-mono text-[0.62rem] tracking-[0.2em] uppercase text-cream/35 mb-4">
+              Portfolio
+            </p>
+            <h1 className="font-display font-normal text-[clamp(3.5rem,9vw,7rem)] leading-[0.92] tracking-tight text-cream">
+              Lucy
+              <br />
+              <em className="italic text-cream/50">Chen</em>
             </h1>
-           <p className="mt-2 text-gray-400 text-base md:text-lg text-center">
-              Software Engineer | Web developer
+            <p className="font-mono text-[0.68rem] tracking-[0.1em] uppercase text-cream/35 mt-4">
+              Software Engineer &amp; Web Developer
             </p>
           </div>
-        </section>
+          <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border border-white/10 flex-shrink-0 grayscale-[20%]">
+            <img
+              src={temp_avatar}
+              alt="Lucy Chen"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </header>
 
-        {/* Projects + links to each project made */}
-        <section className="bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg">
-          <h1
-            className="font-bold text-2xl md:text-3xl mb-3 md:mb-5
-              bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
-          >
-            Projects
-          </h1>
-          {/* carousel slider of projects + links to github repos */}
+        {/* PROJECTS */}
+        <section className="pt-16">
+          <div className="flex items-baseline gap-4 mb-8">
+            <span className="font-mono text-[0.58rem] tracking-[0.12em] text-cream/20">
+              01
+            </span>
+            <h2 className="font-display font-normal text-[1.6rem] tracking-tight text-cream">
+              Personal Projects
+            </h2>
+          </div>
           <ProjectsSection />
         </section>
 
-        {/* tech stack */}
-        <TechStack />
-
+        {/* TECH STACK */}
+        <section className="pt-16">
+          <div className="flex items-baseline gap-4 mb-8">
+            <span className="font-mono text-[0.58rem] tracking-[0.12em] text-cream/20">
+              02
+            </span>
+            <h2 className="font-display font-normal text-[1.6rem] tracking-tight text-cream">
+              Technical Skills
+            </h2>
+          </div>
+          <TechStack />
+        </section>
       </main>
+
       <Footer />
     </div>
   );

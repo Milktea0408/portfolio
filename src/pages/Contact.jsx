@@ -3,169 +3,202 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import emailjs from "@emailjs/browser";
 
+const contactItems = [
+  {
+    type: "Email",
+    value: "lucychen030408@gmail.com",
+    href: "mailto:lucychen030408@gmail.com",
+  },
+  {
+    type: "LinkedIn",
+    value: "lucy-c-791635216",
+    href: "https://linkedin.com/in/lucy-c-791635216",
+  },
+  {
+    type: "GitHub",
+    value: "Milktea0408",
+    href: "https://github.com/Milktea0408",
+  },
+];
+
 function Contact() {
-  // form state to collect input values
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-
-  // for loading and success/error states
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  // handle input changes
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormData({
-      ...formData,
-      [id]: value,
-    });
+    setFormData({ ...formData, [id]: value });
   };
 
-  // function to submit the form and send email
   async function submitForm(e) {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-
-    const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      message: formData.message,
-      to_email: "lucychen030408@gmail.com",
-    };
-
     try {
       await emailjs.send(
-        // service key
         "service_bovp8sg",
-        // template key
         "template_c7lxk4p",
-        templateParams,
-        // public key
-        "JT5QdRlpHtiGqDCc8"
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: "lucychen030408@gmail.com",
+        },
+        "JT5QdRlpHtiGqDCc8",
       );
-
       setFormData({ name: "", email: "", message: "" });
-      setSubmitStatus({ success: true, message: "Message sent successfully!" });
-    } catch (error) {
-      console.error("Error sending email:", error);
+      setSubmitStatus({ success: true, message: "Message sent." });
+    } catch (err) {
+      console.error(err);
       setSubmitStatus({
         success: false,
-        message: "Failed to send message. Please try again later.",
+        message: "Failed to send. Please try again.",
       });
     } finally {
       setIsSubmitting(false);
     }
   }
 
-  return (
-    <div className="min-h-screen flex flex-col text-gray-100">
-      <Navbar />
-      <main className="flex-grow mt-32 px-4 md:px-8 flex flex-col items-center">
-        <h1 className="font-bold text-center text-5xl bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text mb-4">
-          Contact me
-        </h1>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto text-center mb-8 text-base md:text-lg">
-          <b className="">Let's chat! </b>
-          Let's chat! Have questions, feedback, or enquiries? Feel free to drop
-          me a message below.
-        </p>
+  const inputClass =
+    "w-full bg-transparent border-none outline-none text-cream font-display text-base placeholder:text-cream/20 caret-cream";
 
-        <div className="w-full max-w-md bg-gray-800 rounded-xl shadow-lg mb-6 md:mb-11 p-6 md:p-8 border border-gray-700 relative overflow-hidden">
-          {/* decor in top right corner of contact form */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-bl-full"></div>
-          {/* contact form */}
-          <form
-            className="flex flex-col justify-items-center content-center mt-11 max-w-sm mx-auto"
-            onSubmit={submitForm}
-          >
-            {/* Name input */}
-            <div className="mb-5">
+  return (
+    <div className="min-h-screen bg-ink text-cream overflow-x-hidden">
+      <Navbar />
+
+      <main className="max-w-[1100px] mx-auto px-5 md:px-8 pb-16">
+        {/* PAGE HERO */}
+        <header className="pt-36 md:pt-44 pb-14 border-b border-white/[0.07]">
+          <p className="font-mono text-[0.62rem] tracking-[0.2em] uppercase text-cream/35 mb-4">
+            Contact
+          </p>
+          <h1 className="font-display font-normal text-[clamp(2.8rem,7vw,5.5rem)] leading-[0.95] tracking-tight text-cream mb-5">
+            Let's
+            <br />
+            <em className="italic text-cream/50">connect.</em>
+          </h1>
+          <p className="font-mono text-[0.7rem] leading-[1.75] text-cream/38 max-w-md">
+            Have a question, opportunity, or just want to say hello? Drop me a
+            message.
+          </p>
+        </header>
+
+        {/* LAYOUT */}
+        <div className="pt-14 grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-12 md:gap-20">
+          {/* LEFT — contact info */}
+          <div>
+            <p className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-cream/22 mb-5">
+              Reach me at
+            </p>
+            {contactItems.map(({ type, value, href }) => (
+              <div
+                key={type}
+                className="border-t border-white/[0.07] py-4 last:border-b last:border-white/[0.07]"
+              >
+                <p className="font-mono text-[0.58rem] tracking-[0.1em] uppercase text-cream/28 mb-1">
+                  {type}
+                </p>
+                <a
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className="font-display text-[1rem] text-cream hover:text-cream/50 transition-colors duration-200"
+                >
+                  {value}
+                </a>
+              </div>
+            ))}
+          </div>
+
+          {/* RIGHT — form */}
+          <form onSubmit={submitForm} className="flex flex-col">
+            {/* Name */}
+            <div className="border-t border-white/[0.07] py-5">
               <label
                 htmlFor="name"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-cream/28 block mb-2"
               >
                 Name
               </label>
               <input
-                type="text"
                 id="name"
-                placeholder="Name"
+                type="text"
                 required
+                placeholder="Your name"
                 value={formData.name}
                 onChange={handleChange}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className={inputClass}
               />
             </div>
-            {/* Email input */}
-            <div className="mb-5">
+
+            {/* Email */}
+            <div className="border-t border-white/[0.07] py-5">
               <label
                 htmlFor="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-cream/28 block mb-2"
               >
                 Email
               </label>
               <input
-                type="text"
                 id="email"
-                placeholder="Email"
+                type="email"
                 required
+                placeholder="your@email.com"
                 value={formData.email}
                 onChange={handleChange}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className={inputClass}
               />
             </div>
-            {/* message box */}
-            <label
-              htmlFor="message"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              rows="4"
-              required
-              value={formData.message}
-              onChange={handleChange}
-              className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Message"
-            ></textarea>
 
-            {/* status message */}
+            {/* Message */}
+            <div className="border-t border-b border-white/[0.07] py-5">
+              <label
+                htmlFor="message"
+                className="font-mono text-[0.58rem] tracking-[0.12em] uppercase text-cream/28 block mb-2"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                required
+                rows={5}
+                placeholder="What's on your mind?"
+                value={formData.message}
+                onChange={handleChange}
+                className={`${inputClass} resize-none`}
+              />
+            </div>
+
             {submitStatus && (
               <div
-                className={`mt-5 p-3 rounded-lg text-sm ${
+                className={`mt-5 px-4 py-3 font-mono text-[0.62rem] tracking-wide border ${
                   submitStatus.success
-                    ? "bg-green-100 text-green-800"
-                    : "bg-red-100 text-red-800"
+                    ? "bg-white/[0.03] border-white/[0.08] text-cream/55"
+                    : "bg-red-900/10 border-red-500/15 text-red-300/65"
                 }`}
               >
                 {submitStatus.message}
               </div>
             )}
 
-            {/* submit btn */}
-            <div>
+            <div className="mt-8 flex items-center gap-5">
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`mt-5 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors duration-300 
-              ${
-                isSubmitting
-                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                  : "bg-white text-black border border-black hover:bg-gray-500 hover:text-white"
-              }`}
+                className="font-mono text-[0.65rem] tracking-[0.12em] uppercase bg-cream text-ink px-7 py-3 hover:opacity-70 transition-opacity duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? "Sending..." : "Submit"}
+                {isSubmitting ? "Sending…" : "Send message →"}
               </button>
             </div>
           </form>
         </div>
       </main>
+
       <Footer />
     </div>
   );

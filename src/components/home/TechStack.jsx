@@ -18,148 +18,68 @@ import fastAPIIcon from "../../assets/fastapi.svg";
 
 const techStackCategories = [
   {
-    title: "Programming Languages",
+    title: "Languages",
     skills: [
-      {
-        name: "Javascript",
-        icon: javascriptIcon,
-        colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
-      },
-      {
-        name: "Typescript",
-        icon: typescriptIcon,
-        colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
-      },
-      {
-        name: "Python",
-        icon: pythonIcon,
-        colorClass: "hover:shadow-purple-500/20 group-hover:text-purple-400",
-      },
-      {
-        name: "C",
-        icon: cIcon,
-        colorClass: "hover:shadow-purple-500/20 group-hover:text-purple-400",
-      },
-      {
-        name: "Java",
-        icon: javaIcon,
-        colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
-      },
-      {
-        name: "Bash",
-        icon: bashIcon,
-        colorClass: "hover:shadow-purple-500/20 group-hover:text-purple-400",
-      },
+      { name: "Javascript", icon: javascriptIcon },
+      { name: "Typescript", icon: typescriptIcon },
+      { name: "Python", icon: pythonIcon },
+      { name: "C", icon: cIcon },
+      { name: "Java", icon: javaIcon },
+      { name: "Bash", icon: bashIcon },
     ],
   },
   {
     title: "Frontend",
     skills: [
-      {
-        name: "React",
-        icon: reactIcon,
-        colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
-      },
-      {
-        name: "HTML",
-        icon: html5Icon,
-        colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
-      },
-      {
-        name: "CSS",
-        icon: cssIcon,
-        colorClass: "hover:shadow-purple-500/20 group-hover:text-purple-400",
-      },
-      {
-        name: "BootStrap",
-        icon: boostrapIcon,
-        colorClass: "hover:shadow-purple-500/20 group-hover:text-purple-400",
-      },
-      {
-        name: "Tailwind",
-        icon: tailwindIcon,
-        colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
-      },
-      {
-        name: "Material UI",
-        icon: materialUIIcon,
-        colorClass: "hover:shadow-purple-500/20 group-hover:text-purple-400",
-      },
+      { name: "React", icon: reactIcon },
+      { name: "HTML", icon: html5Icon },
+      { name: "CSS", icon: cssIcon },
+      { name: "Bootstrap", icon: boostrapIcon },
+      { name: "Tailwind", icon: tailwindIcon },
+      { name: "Material UI", icon: materialUIIcon },
     ],
   },
   {
-    title: "Backend and and Tools",
+    title: "Backend & Tools",
     skills: [
-      {
-        name: "PostgreSQL",
-        icon: postgresqlIcon,
-        colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
-      },
-      {
-        name: "Node.js",
-        icon: nodeJSIcon,
-        colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
-      },
-      {
-        name: "Docker",
-        icon: dockerIcon,
-        colorClass: "hover:shadow-purple-500/20 group-hover:text-purple-400",
-      },
-      {
-        name: "Git",
-        icon: gitIcon,
-        colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
-      },
-      {
-        name: "FastAPI",
-        icon: fastAPIIcon,
-        colorClass: "hover:shadow-purple-500/20 group-hover:text-purple-400",
-      },
+      { name: "PostgreSQL", icon: postgresqlIcon },
+      { name: "Node.js", icon: nodeJSIcon },
+      { name: "Docker", icon: dockerIcon },
+      { name: "Git", icon: gitIcon },
+      { name: "FastAPI", icon: fastAPIIcon },
     ],
   },
 ];
 
-const SkillCard = ({ name, icon, colorClass }) => (
-  <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-gray-700 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-lg border border-gray-600 group">
-    <div className="w-1/2 md:w-3/5 group-hover:scale-110 transition-transform duration-300">
-      <img alt={`${name} logo`} src={icon} className="w-full" />
-    </div>
-    <p
-      className={`text-xs sm:text-sm md:text-base mt-2 transition-colors duration-300 ${colorClass}`}
-    >
+const SkillPill = ({ name, icon }) => (
+  <div className="flex items-center gap-2 px-3 py-2 border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.06] hover:border-white/[0.18] transition-all duration-200 cursor-default rounded-sm">
+    <img
+      src={icon}
+      alt={`${name} icon`}
+      className="w-4 h-4 object-contain opacity-80"
+    />
+    <span className="font-mono text-[0.66rem] tracking-[0.05em] text-cream/58 whitespace-nowrap group-hover:text-cream/90">
       {name}
-    </p>
+    </span>
   </div>
 );
 
 function TechStack() {
   return (
-    <section className="bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg">
-      <h1
-        className="font-bold text-2xl md:text-3xl mb-3 md:mb-5
-    bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
-      >
-        Technical Skills
-      </h1>
-
+    <div className="space-y-8">
       {techStackCategories.map((category) => (
         <div key={category.title}>
-          <h2 className="text-lg md:text-xl text-gray-200 border-b border-gray-700 pb-2 mb-2">
+          <p className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-cream/25 mb-3 pb-3 border-b border-white/[0.06]">
             {category.title}
-          </h2>
-          <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-5 flex-wrap my-4 md:my-7 justify-center">
+          </p>
+          <div className="flex flex-wrap gap-2">
             {category.skills.map((skill) => (
-              <SkillCard
-                key={skill.name}
-                name={skill.name}
-                icon={skill.icon}
-                colorClass={skill.colorClass}
-              />
+              <SkillPill key={skill.name} name={skill.name} icon={skill.icon} />
             ))}
           </div>
         </div>
       ))}
-    </section>
+    </div>
   );
 }
 
