@@ -46,7 +46,7 @@ function About() {
         </section>
 
         {/* hobbies/ interests section */}
-        <section className="bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg">
+        {/* <section className="bg-gray-800 rounded-xl p-6 md:p-8 shadow-lg">
           <h1
             className="font-bold text-2xl md:text-3xl mb-3 md:mb-5
             bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
@@ -85,16 +85,8 @@ function About() {
               </p>
             </div>
           </section>
-        </section>
-        {/* cta button to go back to home page where the projects are */}
-        <div className="flex justify-center">
-          <button
-            onClick={toHomePage}
-            className={`mt-5 mb-10 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors duration-300 bg-white text-black border border-black hover:bg-gray-500 hover:text-white`}
-          >
-            See my work
-          </button>
-        </div>
+        </section> */}
+
       </main>
       <Footer />
     </div>
