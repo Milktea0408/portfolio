@@ -4,6 +4,12 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import emailjs from "@emailjs/browser";
 
+const EMAILJS_CONFIG = {
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+};
+
 const contactItems = [
   {
     type: "Email",
@@ -76,15 +82,15 @@ function Contact() {
 
     try {
       await emailjs.send(
-        "service_bovp8sg",
-        "template_c7lxk4p",
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.templateId,
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           to_email: "lucychen030408@gmail.com",
         },
-        "JT5QdRlpHtiGqDCc8",
+        EMAILJS_CONFIG.publicKey,
       );
       setFormData({ name: "", email: "", message: "" });
       setSubmitStatus({ success: true, message: "Message sent." });
