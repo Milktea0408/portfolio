@@ -12,7 +12,7 @@ function About() {
 
       <main className="max-w-[1100px] mx-auto px-5 md:px-8 pb-16">
         {/* PAGE HERO */}
-        <header className="pt-36 md:pt-44 pb-14 border-b border-white/[0.07] flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+        <header className="pt-36 md:pt-44 pb-14 border-b border-white/[0.07] grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_clamp(8.5rem,18vw,12rem)] md:items-end gap-8">
           <div>
             <p className="font-mono text-[0.62rem] tracking-[0.2em] uppercase text-cream/35 mb-4">
               About me
@@ -23,7 +23,7 @@ function About() {
               <em className="italic text-cream/50">about me.</em>
             </h1>
           </div>
-          <div className="hidden md:block w-48 h-48 rounded-lg overflow-hidden border border-white/[0.08] grayscale-[25%]">
+          <div className="hidden md:block w-full aspect-square rounded-lg overflow-hidden border border-white/[0.08] grayscale-[25%]">
             <img
               src={temp_avatar}
               alt="Lucy Chen"
