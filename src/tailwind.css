@@ -99,7 +99,8 @@
 
   .tech-marquee-track {
     display: flex;
-    width: max-content;
+    min-width: 200%;
+    width: fit-content;
     gap: 0.5rem;
     animation: tech-slide-left 32s linear infinite;
     will-change: transform;
