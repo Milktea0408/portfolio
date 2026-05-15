@@ -15,6 +15,10 @@ import typescriptIcon from "../../assets/typescript.svg";
 import dockerIcon from "../../assets/docker.svg";
 import gitIcon from "../../assets/git.svg";
 import fastAPIIcon from "../../assets/fastapi.svg";
+import shadcnIcon from "../../assets/shadcn.svg";
+import vercelIcon from "../../assets/vercel.svg";
+import memgraphIcon from "../../assets/memgraph.svg";
+import cicdIcon from "../../assets/cicd.svg";
 
 const techStackCategories = [
   {
@@ -37,6 +41,7 @@ const techStackCategories = [
       { name: "Bootstrap", icon: boostrapIcon },
       { name: "Tailwind", icon: tailwindIcon },
       { name: "Material UI", icon: materialUIIcon },
+      { name: "shadcn", icon: shadcnIcon },
     ],
   },
   {
@@ -47,6 +52,9 @@ const techStackCategories = [
       { name: "Docker", icon: dockerIcon },
       { name: "Git", icon: gitIcon },
       { name: "FastAPI", icon: fastAPIIcon },
+      { name: "Memgraph DB", icon: memgraphIcon },
+      { name: "Vercel", icon: vercelIcon },
+      { name: "CI/CD", icon: cicdIcon },
     ],
   },
 ];
