@@ -30,13 +30,6 @@ const techStackCategories = [
       { name: "C", icon: cIcon },
       { name: "Java", icon: javaIcon },
       { name: "Bash", icon: bashIcon },
-      // duplicate for endless scroll effect
-      { name: "Javascript", icon: javascriptIcon },
-      { name: "Typescript", icon: typescriptIcon },
-      { name: "Python", icon: pythonIcon },
-      { name: "C", icon: cIcon },
-      { name: "Java", icon: javaIcon },
-      { name: "Bash", icon: bashIcon },
     ],
   },
   {
@@ -49,28 +42,11 @@ const techStackCategories = [
       { name: "Tailwind", icon: tailwindIcon },
       { name: "Material UI", icon: materialUIIcon },
       { name: "shadcn", icon: shadcnIcon },
-      // duplicate for endless scroll effect
-      { name: "React", icon: reactIcon },
-      { name: "HTML", icon: html5Icon },
-      { name: "CSS", icon: cssIcon },
-      { name: "Bootstrap", icon: boostrapIcon },
-      { name: "Tailwind", icon: tailwindIcon },
-      { name: "Material UI", icon: materialUIIcon },
-      { name: "shadcn", icon: shadcnIcon },
     ],
   },
   {
     title: "Backend & Tools",
     skills: [
-      { name: "PostgreSQL", icon: postgresqlIcon },
-      { name: "Node.js", icon: nodeJSIcon },
-      { name: "Docker", icon: dockerIcon },
-      { name: "Git", icon: gitIcon },
-      { name: "FastAPI", icon: fastAPIIcon },
-      { name: "Memgraph DB", icon: memgraphIcon },
-      { name: "Vercel", icon: vercelIcon },
-      { name: "CI/CD", icon: cicdIcon },
-      // duplicate for endless scroll effect
       { name: "PostgreSQL", icon: postgresqlIcon },
       { name: "Node.js", icon: nodeJSIcon },
       { name: "Docker", icon: dockerIcon },
@@ -108,15 +84,20 @@ function TechStack() {
           <p className="font-mono text-[0.58rem] tracking-[0.14em] uppercase text-cream/25 mb-3 pb-3 border-b border-white/[0.06]">
             {category.title}
           </p>
-          <div className="tech-marquee" data-direction={index % 2 === 0 ? "left" : "right"}>
+          <div
+            className="tech-marquee"
+            data-direction={index % 2 === 0 ? "left" : "right"}
+          >
             <div className="tech-marquee-track">
-              {[...category.skills, ...category.skills].map((skill, skillIndex) => (
-                <SkillPill
-                  key={`${skill.name}-${skillIndex}`}
-                  name={skill.name}
-                  icon={skill.icon}
-                />
-              ))}
+              {Array.from({ length: 4 }, (_, copyIndex) =>
+                category.skills.map((skill) => (
+                  <SkillPill
+                    key={`${skill.name}-${copyIndex}`}
+                    name={skill.name}
+                    icon={skill.icon}
+                  />
+                )),
+              )}
             </div>
           </div>
         </div>

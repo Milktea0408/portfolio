@@ -11,7 +11,7 @@ const projectsData = [
     image: "/assets/portfolio.png",
     technologies: ["React", "Tailwind", "JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/Milktea0408/personal_website/",
-    liveUrl: "https://portfolio-git-main-lucys-projects-2f70a777.vercel.app/",
+    liveUrl: "https://portfolio-blue-six-kgwca3lba2.vercel.app/",
   },
   {
     id: 2,
