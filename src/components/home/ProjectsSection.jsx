@@ -54,7 +54,10 @@ function ProjectsSection() {
   return (
     <div>
       {/* Card */}
-      <div className="border border-white/[0.08] bg-white/[0.02] grid grid-cols-1 md:grid-cols-2 min-h-[300px] md:min-h-[340px]">
+      <div
+        key={project.id}
+        className="project-card-enter border border-white/[0.08] bg-white/[0.02] grid grid-cols-1 md:grid-cols-2 min-h-[300px] md:min-h-[340px] transition-colors duration-500 hover:border-white/[0.14] hover:bg-white/[0.025]"
+      >
         <div className="overflow-hidden bg-white/[0.03] flex flex-col border-b md:border-b-0 md:border-r border-white/[0.06]">
           {/* Browser bar */}
           <div className="flex items-center gap-2 px-4 py-3 bg-white/[0.02] border-b border-white/[0.06]">
@@ -74,7 +77,7 @@ function ProjectsSection() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="absolute inset-0 w-full h-full object-cover md:object-cover object-top grayscale-[30%] opacity-80 hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 w-full h-full object-cover md:object-cover object-top grayscale-[30%] opacity-80 hover:opacity-100 hover:scale-[1.025] transition-all duration-700"
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
@@ -103,10 +106,11 @@ function ProjectsSection() {
             )}
             {project.technologies.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-6">
-                {project.technologies.map((t) => (
+                {project.technologies.map((t, index) => (
                   <span
                     key={t}
-                    className="font-mono text-[0.58rem] tracking-[0.06em] px-2 py-1 border border-white/[0.1] text-cream/38"
+                    className="project-tech-chip font-mono text-[0.58rem] tracking-[0.06em] px-2 py-1 border border-white/[0.1] text-cream/38"
+                    style={{ "--chip-delay": `${index * 55}ms` }}
                   >
                     {t}
                   </span>

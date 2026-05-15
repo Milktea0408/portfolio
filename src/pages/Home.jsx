@@ -49,7 +49,7 @@ function Home() {
                 Software Engineer &amp; Web Developer
               </p>
             </div>
-            <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full overflow-hidden border border-white/10 flex-shrink-0 grayscale-[20%]">
+            <div className="hero-avatar w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full overflow-hidden border border-white/10 flex-shrink-0 grayscale-[20%]">
               <img
                 src={temp_avatar}
                 alt="Lucy Chen"

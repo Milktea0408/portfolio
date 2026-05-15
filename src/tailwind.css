@@ -47,6 +47,65 @@
     transform: translateY(0);
   }
 
+  .hero-avatar {
+    animation: soft-avatar-float 8s ease-in-out infinite;
+    box-shadow: 0 0 42px rgb(240 237 230 / 0.045);
+  }
+
+  .project-card-enter {
+    animation: project-card-enter 620ms ease both;
+  }
+
+  .project-tech-chip {
+    animation: soft-chip-enter 460ms ease both;
+    animation-delay: var(--chip-delay);
+  }
+
+  .tech-stack-row {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  .home-section.is-visible .tech-stack-row {
+    animation: soft-row-enter 620ms ease both;
+    animation-delay: var(--row-delay);
+  }
+
+  .tech-marquee {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+
+  .tech-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 0.5rem;
+    animation: tech-slide-left 32s linear infinite;
+    will-change: transform;
+  }
+
+  .tech-marquee[data-direction="right"] .tech-marquee-track {
+    animation-name: tech-slide-right;
+    animation-duration: 38s;
+  }
+
+  .tech-marquee:hover .tech-marquee-track {
+    animation-play-state: paused;
+  }
+
   .floating-particles {
     position: fixed;
     inset: 0;
@@ -65,6 +124,73 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     will-change: transform;
+  }
+}
+
+@keyframes soft-avatar-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes project-card-enter {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes soft-chip-enter {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes soft-row-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tech-slide-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50% - 0.25rem));
+  }
+}
+
+@keyframes tech-slide-right {
+  0% {
+    transform: translateX(calc(-50% - 0.25rem));
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -100,6 +226,19 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .hero-avatar,
+  .project-card-enter,
+  .project-tech-chip,
+  .home-section.is-visible .tech-stack-row,
+  .tech-marquee-track {
+    animation: none;
+  }
+
+  .tech-stack-row {
+    opacity: 1;
+    transform: none;
   }
 
   .floating-particle {
