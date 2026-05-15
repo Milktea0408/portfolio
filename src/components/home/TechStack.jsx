@@ -12,6 +12,9 @@ import pythonIcon from "../../assets/python.svg";
 import reactIcon from "../../assets/react.svg";
 import tailwindIcon from "../../assets/tailwind.svg";
 import typescriptIcon from "../../assets/typescript.svg";
+import dockerIcon from "../../assets/docker.svg";
+import gitIcon from "../../assets/git.svg";
+import fastAPIIcon from "../../assets/fastapi.svg";
 
 const techStackCategories = [
   {
@@ -85,7 +88,7 @@ const techStackCategories = [
     ],
   },
   {
-    title: "Backend and Database",
+    title: "Backend and and Tools",
     skills: [
       {
         name: "PostgreSQL",
@@ -93,8 +96,23 @@ const techStackCategories = [
         colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
       },
       {
-        name: "NodeJS",
+        name: "Node.js",
         icon: nodeJSIcon,
+        colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
+      },
+      {
+        name: "Docker",
+        icon: dockerIcon,
+        colorClass: "hover:shadow-purple-500/20 group-hover:text-purple-400",
+      },
+      {
+        name: "Git",
+        icon: gitIcon,
+        colorClass: "hover:shadow-blue-500/20 group-hover:text-blue-400",
+      },
+      {
+        name: "FastAPI",
+        icon: fastAPIIcon,
         colorClass: "hover:shadow-purple-500/20 group-hover:text-purple-400",
       },
     ],
