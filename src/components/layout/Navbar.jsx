@@ -31,7 +31,7 @@ function Navbar() {
   const isActive = (path) => currentPath === path;
 
   const linkBase =
-    "font-mono text-[0.65rem] tracking-[0.12em] uppercase transition-colors duration-200";
+    "font-mono text-[0.65rem] tracking-[0.12em] uppercase transition-colors duration-300";
   const activeLink = `${linkBase} text-cream`;
   const inactiveLink = `${linkBase} text-cream/40 hover:text-cream`;
 
@@ -40,7 +40,7 @@ function Navbar() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-4 h-4 text-cream/40 hover:text-cream transition-colors duration-200"
+      className="w-4 h-4 text-cream/40 hover:text-cream transition-colors duration-300"
     >
       {children}
     </a>
@@ -74,7 +74,7 @@ function Navbar() {
           {/* Logo center */}
           <button
             onClick={(e) => goToPage(e, "/")}
-            className="font-display italic text-[1.05rem] text-cream hover:text-cream/60 transition-colors duration-200 tracking-wide"
+            className="font-display italic text-[1.05rem] text-cream hover:text-cream/60 transition-colors duration-300 tracking-wide"
           >
             Lucy Chen
           </button>
@@ -89,7 +89,7 @@ function Navbar() {
             </SocialIcon>
             <a
               href="mailto:lucychen030408@gmail.com"
-              className="w-4 h-4 opacity-40 hover:opacity-100 transition-opacity duration-200"
+              className="w-4 h-4 opacity-40 hover:opacity-100 transition-opacity duration-300"
             >
               <EmailIcon emailGradientId="nav-d-em" />
             </a>
