@@ -7,10 +7,10 @@ function About() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen text-cream overflow-x-hidden">
+    <div className="min-h-screen text-cream overflow-x-hidden flex flex-col">
       <Navbar />
 
-      <main className="max-w-[1100px] mx-auto px-5 md:px-8 pb-16">
+      <main className="w-full max-w-[1100px] mx-auto px-5 md:px-8 pb-16 flex-1">
         {/* PAGE HERO */}
         <header className="pt-36 md:pt-44 pb-14 border-b border-white/[0.07] grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_clamp(8.5rem,18vw,12rem)] md:items-end gap-8">
           <div>
