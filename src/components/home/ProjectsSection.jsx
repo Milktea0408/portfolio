@@ -16,7 +16,7 @@ const projectsData = [
     id: 2,
     title: "Internship Front-End Project",
     description:
-      "A responsive website built for a startup during my internship. Contributed to front-end development and key sections of the website.",
+      "A responsive website built for a startup during an internship. Contributed to front-end development and key sections of the website.",
     image: "./src/assets/internship_project.png",
     technologies: ["HTML", "CSS", "JavaScript", "PostgreSQL"],
     githubUrl: null,
