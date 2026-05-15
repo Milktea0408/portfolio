@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 // icons
-import LinkedInIcon from "./icons/LinkedInIcon";
-import EmailIcon from "./icons/EmailIcon";
-import GithubIcon from "./icons/GithubIcon";
+import LinkedInIcon from "../icons/LinkedInIcon";
+import EmailIcon from "../icons/EmailIcon";
+import GithubIcon from "../icons/GithubIcon";
 
 // hamburger and X icon from npm library
 import { Menu, X } from "lucide-react";
@@ -14,7 +14,7 @@ function Navbar() {
   // usestate for opening/closing menu
   const [menuOpen, setMenuOpen] = useState(false);
   // track current page
-  const [currentPath, setCurrentPath] = useState("/");
+  const [currentPath, setCurrentPath] = useState(location.pathname);
 
   // Update currentPath when location changes
   useEffect(() => {

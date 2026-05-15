@@ -9,7 +9,7 @@ const projectsData = [
     title: "Personal Portfolio",
     description:
       "A responsive personal portfolio website built with React and Tailwind CSS.",
-    image: "./src//assets/default_project_image.jpg", // Replace with your image path
+    image: "./src//assets/default_project_image.jpg",
     technologies: ["React", "Tailwind", "JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/Milktea0408/personal_website/",
     liveUrl: "https://yourportfolio.com",
@@ -20,19 +20,18 @@ const projectsData = [
     title: "Internship Front-End Project",
     description:
       "A modern, responsive website built for a startup during my internship. I worked on front-end development and contributed to key sections of the site.",
-    image: "./src//assets/default_project_image.jpg", // Replace with your image path
+    image: "./src//assets/default_project_image.jpg",
     technologies: ["HTML", "CSS", "JavaScript", "PostgreSQL"],
     githubUrl: null, // private repo
     liveUrl: "https://ignitionstudio.co/",
   },
   {
     id: 3,
-    title: "Weather Tracking App",
-    description:
+    title: "Coming Soon",
+    description: "",
       // "A weather app that fetches and displays weather for a given location.",
-      "Coming soon!",
-    image: "./src//assets/default_project_image.jpg", // Replace with your image path
-    technologies: ["React", "Tailwind", "HTML", "CSS", "JavaScript"],
+    image: "./src//assets/default_project_image.jpg",
+    technologies: [],
     // githubUrl: "https://github.com/yourusername/task-app",
     githubUrl: null,
     // liveUrl: "https://yourtaskapp.com",
