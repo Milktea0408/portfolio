@@ -1,6 +1,6 @@
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import ProjectsSection from "../components/ProjectsSection";
+import ProjectsSection from "../components/home/ProjectsSection";
 // programming languages icons
 import bashIcon from "../assets/bash.svg";
 import boostrapIcon from "../assets/bootstrap.svg";
