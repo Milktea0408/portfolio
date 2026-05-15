@@ -7,7 +7,8 @@ const projectsData = [
     title: "Personal Portfolio (Current website)",
     description:
       "A responsive personal portfolio website built with React and Tailwind CSS.",
-    image: "./src/assets/portfolio.png",
+    // image: "./src/assets/portfolio.png", // local development
+    image: "/assets/portfolio.png",
     technologies: ["React", "Tailwind", "JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/Milktea0408/personal_website/",
     liveUrl: "https://yourportfolio.com",
@@ -17,7 +18,8 @@ const projectsData = [
     title: "Internship Front-End Project",
     description:
       "A responsive website built for a startup during an internship. Contributed to front-end development and key sections of the website.",
-    image: "./src/assets/internship_project.png",
+    // image: "./src/assets/internship_project.png", // local development
+    image: "/assets/internship_project.png",
     technologies: ["HTML", "CSS", "JavaScript", "PostgreSQL"],
     githubUrl: null,
     liveUrl: "https://ignitionstudio.co/",
