@@ -56,6 +56,14 @@
     animation: project-card-enter 620ms ease both;
   }
 
+  .project-card-enter-left {
+    --project-enter-x: -18px;
+  }
+
+  .project-card-enter-right {
+    --project-enter-x: 18px;
+  }
+
   .project-tech-chip {
     animation: soft-chip-enter 460ms ease both;
     animation-delay: var(--chip-delay);
@@ -141,7 +149,7 @@
 @keyframes project-card-enter {
   0% {
     opacity: 0;
-    transform: translate3d(0, 16px, 0);
+    transform: translate3d(var(--project-enter-x), 0, 0);
   }
 
   100% {

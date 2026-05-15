@@ -35,6 +35,7 @@ const projectsData = [
 
 function ProjectsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slideDirection, setSlideDirection] = useState("right");
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -44,10 +45,21 @@ function ProjectsSection() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  const prevProject = () =>
+  const prevProject = () => {
+    setSlideDirection("left");
     setCurrentIndex((i) => (i === 0 ? projectsData.length - 1 : i - 1));
-  const nextProject = () =>
+  };
+
+  const nextProject = () => {
+    setSlideDirection("right");
     setCurrentIndex((i) => (i === projectsData.length - 1 ? 0 : i + 1));
+  };
+
+  const goToProject = (index) => {
+    if (index === currentIndex) return;
+    setSlideDirection(index > currentIndex ? "right" : "left");
+    setCurrentIndex(index);
+  };
 
   const project = projectsData[currentIndex];
 
@@ -56,7 +68,7 @@ function ProjectsSection() {
       {/* Card */}
       <div
         key={project.id}
-        className="project-card-enter border border-white/[0.08] bg-white/[0.02] grid grid-cols-1 md:grid-cols-2 min-h-[300px] md:min-h-[340px] transition-colors duration-500 hover:border-white/[0.14] hover:bg-white/[0.025]"
+        className={`project-card-enter project-card-enter-${slideDirection} border border-white/[0.08] bg-white/[0.02] grid grid-cols-1 md:grid-cols-2 min-h-[300px] md:min-h-[340px] transition-colors duration-500 hover:border-white/[0.14] hover:bg-white/[0.025]`}
       >
         <div className="overflow-hidden bg-white/[0.03] flex flex-col border-b md:border-b-0 md:border-r border-white/[0.06]">
           {/* Browser bar */}
@@ -150,7 +162,7 @@ function ProjectsSection() {
           {projectsData.map((_, i) => (
             <button
               key={i}
-              onClick={() => setCurrentIndex(i)}
+              onClick={() => goToProject(i)}
               aria-label={`Go to project ${i + 1}`}
               className={`h-1.5 rounded-sm transition-all duration-200 border-none cursor-pointer ${
                 i === currentIndex
