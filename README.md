@@ -100,6 +100,7 @@ personal_website/
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html
+├── LICENSE.md
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.js
