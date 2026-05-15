@@ -17,7 +17,7 @@ const projectsData = [
     title: "Internship Front-End Project",
     description:
       "A responsive website built for a startup during my internship. Contributed to front-end development and key sections of the website.",
-    image: "./src/assets/default_project_image.jpg",
+    image: "./src/assets/internship_project.png",
     technologies: ["HTML", "CSS", "JavaScript", "PostgreSQL"],
     githubUrl: null,
     liveUrl: "https://ignitionstudio.co/",
@@ -55,19 +55,35 @@ function ProjectsSection() {
     <div>
       {/* Card */}
       <div className="border border-white/[0.08] bg-white/[0.02] grid grid-cols-1 md:grid-cols-2 min-h-[300px] md:min-h-[340px]">
-        {/* Image pane */}
-        <div className="overflow-hidden bg-white/[0.03] flex items-center justify-center border-b md:border-b-0 md:border-r border-white/[0.06] h-48 md:h-auto">
-          {project.image ? (
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover grayscale-[30%] opacity-80 hover:opacity-100 transition-opacity duration-300"
-            />
-          ) : (
-            <span className="font-mono text-[0.62rem] tracking-[0.1em] uppercase text-cream/15">
-              No preview
-            </span>
-          )}
+        <div className="overflow-hidden bg-white/[0.03] flex flex-col border-b md:border-b-0 md:border-r border-white/[0.06]">
+          {/* Browser bar */}
+          <div className="flex items-center gap-2 px-4 py-3 bg-white/[0.02] border-b border-white/[0.06]">
+            <div className="flex gap-1.5">
+              <div className="w-2 h-2 rounded-full bg-white/20" />
+              <div className="w-2 h-2 rounded-full bg-white/20" />
+              <div className="w-2 h-2 rounded-full bg-white/20" />
+            </div>
+            <div className="flex-1 ml-3 h-4 bg-white/[0.03] rounded px-2 text-[0.5rem] text-cream/15 flex items-center font-mono">
+              {project.title}
+            </div>
+          </div>
+
+          {/* Image pane */}
+          <div className="relative aspect-[16/10] md:aspect-auto md:flex-1">
+            {project.image ? (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="absolute inset-0 w-full h-full object-cover object-top grayscale-[30%] opacity-80 hover:opacity-100 transition-opacity duration-300"
+              />
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="font-mono text-[0.62rem] tracking-[0.1em] uppercase text-cream/15">
+                  No preview
+                </span>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Info pane */}
