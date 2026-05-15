@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Github, ExternalLink } from "lucide-react";
 const projectsData = [
   {
     id: 1,
-    title: "Personal Portfolio",
+    title: "Personal Portfolio (Current website)",
     description:
       "A responsive personal portfolio website built with React and Tailwind CSS.",
     image: "./src/assets/default_project_image.jpg",
@@ -16,7 +16,7 @@ const projectsData = [
     id: 2,
     title: "Internship Front-End Project",
     description:
-      "A modern, responsive website built for a startup during my internship. Contributed to front-end development and key sections of the site.",
+      "A responsive website built for a startup during my internship. Contributed to front-end development and key sections of the website.",
     image: "./src/assets/default_project_image.jpg",
     technologies: ["HTML", "CSS", "JavaScript", "PostgreSQL"],
     githubUrl: null,
