@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Send, CircleX } from "lucide-react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import emailjs from "@emailjs/browser";
@@ -33,12 +34,46 @@ function Contact() {
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
+    setSubmitStatus(null);
   };
+
+  const isValidEmail = (value) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
 
   async function submitForm(e) {
     e.preventDefault();
+
+    const name = formData.name.trim();
+    const email = formData.email.trim();
+    const message = formData.message.trim();
+
+    if (!isValidEmail(email)) {
+      setSubmitStatus({
+        success: false,
+        message: "Please enter a valid email address.",
+      });
+      return;
+    }
+
+    if (name.length > 50) {
+      setSubmitStatus({
+        success: false,
+        message: "Name must be 50 characters or less.",
+      });
+      return;
+    }
+
+    if (message.length > 2500) {
+      setSubmitStatus({
+        success: false,
+        message: "Message must be 2500 characters or less.",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus(null);
+
     try {
       await emailjs.send(
         "service_bovp8sg",
@@ -66,6 +101,14 @@ function Contact() {
 
   const inputClass =
     "w-full bg-transparent border-none outline-none text-cream font-display text-base placeholder:text-cream/20 caret-cream";
+
+  const hasError = submitStatus && !submitStatus.success;
+
+  const buttonLabel = isSubmitting
+    ? "Sending..."
+    : hasError
+      ? "Error"
+      : "Send message";
 
   return (
     <div className="min-h-screen text-cream overflow-x-hidden">
@@ -190,9 +233,20 @@ function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="font-mono text-[0.65rem] tracking-[0.12em] uppercase bg-cream text-ink px-7 py-3 hover:opacity-70 transition-opacity duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+                className={`inline-flex items-center gap-2 font-mono text-[0.65rem] tracking-[0.12em] uppercase bg-cream text-ink px-7 py-3 transition-opacity duration-200 ${
+                  isSubmitting
+                    ? "opacity-30 cursor-not-allowed"
+                    : hasError
+                      ? "opacity-50"
+                      : "hover:opacity-70"
+                } disabled:opacity-30 disabled:cursor-not-allowed`}
               >
-                {isSubmitting ? "Sending…" : "Send message →"}
+                {hasError ? (
+                  <CircleX size={14} strokeWidth={2.25} />
+                ) : (
+                  <Send size={14} strokeWidth={2.25} />
+                )}
+                {buttonLabel}
               </button>
             </div>
           </form>
