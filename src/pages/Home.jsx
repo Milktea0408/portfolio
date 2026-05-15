@@ -28,8 +28,8 @@ function Home() {
             >
               Lucy Chen
             </h1>
-            <p className="mt-2 text-gray-400 text-base text-center md:text-lg md:text-left">
-              Front-end Engineer | Web developer | Software Engineer
+           <p className="mt-2 text-gray-400 text-base md:text-lg text-center">
+              Software Engineer | Web developer
             </p>
           </div>
         </section>
@@ -48,7 +48,7 @@ function Home() {
 
         {/* tech stack */}
         <TechStack />
-        
+
       </main>
       <Footer />
     </div>
