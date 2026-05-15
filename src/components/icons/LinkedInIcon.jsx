@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 function LinkedInIcon({ linkedinGradientId }) {
-  const [hovered, setHovered] = useState(false);
 
   return (
     <svg
@@ -9,7 +8,7 @@ function LinkedInIcon({ linkedinGradientId }) {
       onMouseLeave={() => setHovered(false)}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      className="h-full w-full transition-all duration-300"
+      className="h-full w-full transition-colors duration-300"
     >
       <path
         d="M472,480h-79.991c-19.375,0-35.523-13.758-39.211-32.04
@@ -33,8 +32,7 @@ function LinkedInIcon({ linkedinGradientId }) {
         c0.539,2.602,0.805,5.328,0.805,8.094v160.006C512,462.101,494.102,480,472,480L472,480z M208.006,447.999c8.824,0,16,7.172,16,16
         c0,8.845-7.175,16.001-16,16.001c-8.844,0-16.004-7.156-16.004-16.001C192.002,455.171,199.163,447.999,208.006,447.999
         L208.006,447.999z"
-        fill={hovered ? "#f0ede6" : "rgba(240,237,230,0.4)"}
-        className="transition-all duration-300"
+        fill="currentColor"
       />
     </svg>
   );

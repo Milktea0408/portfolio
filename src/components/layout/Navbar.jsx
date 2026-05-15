@@ -40,7 +40,7 @@ function Navbar() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-4 h-4 opacity-40 hover:opacity-100 transition-opacity duration-200"
+      className="w-4 h-4 text-cream/40 hover:text-cream transition-colors duration-200"
     >
       {children}
     </a>
