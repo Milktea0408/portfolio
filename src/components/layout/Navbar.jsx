@@ -49,9 +49,9 @@ function Navbar() {
         {/* navlinks */}
         <section className="flex gap-5">
           <a
-            href="/home"
-            onClick={(e) => goToPage(e, "/home")}
-            className={isActive("/home") ? activeClass : inactiveClass}
+            href="/"
+            onClick={(e) => goToPage(e, "/")}
+            className={isActive("/") ? activeClass : inactiveClass}
           >
             Home
           </a>
@@ -73,7 +73,7 @@ function Navbar() {
 
         {/* name in the middle */}
         <section
-          onClick={(e) => goToPage(e, "/home")}
+          onClick={(e) => goToPage(e, "/")}
           className="font-bold cursor-pointer hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
         >
           LUCY CHEN
@@ -110,7 +110,7 @@ function Navbar() {
       <nav className="md:hidden bg-[#212121] fixed top-0 w-full text-white flex items-center justify-between px-4 py-3 z-10">
         {/* name in top left corner */}
         <section
-          onClick={(e) => goToPage(e, "/home")}
+          onClick={(e) => goToPage(e, "/")}
           className="font-bold cursor-pointer hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-transparent hover:bg-clip-text transition-all duration-100"
         >
           LUCY CHEN
@@ -124,9 +124,9 @@ function Navbar() {
         {menuOpen && (
           <div className="md:hidden fixed top-12 left-0 w-full bg-[#212121] text-white flex flex-col gap-4 px-4 py-3 z-10">
             <a
-              href="/home"
-              onClick={(e) => goToPage(e, "/home")}
-              className={isActive("/home") ? activeClass : inactiveClass}
+              href="/"
+              onClick={(e) => goToPage(e, "/")}
+              className={isActive("/") ? activeClass : inactiveClass}
             >
               Home
             </a>
