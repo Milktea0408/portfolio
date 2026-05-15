@@ -6,7 +6,7 @@ import temp_avatar from "../assets/favicon.svg";
 
 function Home() {
   return (
-    <div className="min-h-screen bg-ink text-cream relative overflow-x-hidden">
+    <div className="min-h-screen text-cream relative overflow-x-hidden">
       <Navbar />
 
       <main className="max-w-[1100px] mx-auto px-5 md:px-8 pb-16">

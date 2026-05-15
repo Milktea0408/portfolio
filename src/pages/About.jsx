@@ -7,7 +7,7 @@ function About() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-ink text-cream overflow-x-hidden">
+    <div className="min-h-screen text-cream overflow-x-hidden">
       <Navbar />
 
       <main className="max-w-[1100px] mx-auto px-5 md:px-8 pb-16">

@@ -68,7 +68,7 @@ function Contact() {
     "w-full bg-transparent border-none outline-none text-cream font-display text-base placeholder:text-cream/20 caret-cream";
 
   return (
-    <div className="min-h-screen bg-ink text-cream overflow-x-hidden">
+    <div className="min-h-screen text-cream overflow-x-hidden">
       <Navbar />
 
       <main className="max-w-[1100px] mx-auto px-5 md:px-8 pb-16">

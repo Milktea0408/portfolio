@@ -11,4 +11,60 @@
     background-color: #0a0a0a;
     color: #f0ede6;
   }
+
+  body {
+    min-height: 100vh;
+  }
+
+  #root {
+    isolation: isolate;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@layer components {
+  .floating-particles {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .floating-particle {
+    position: absolute;
+    border-radius: 9999px;
+    background: rgb(255 255 255 / 0.85);
+    box-shadow: 0 0 12px rgb(255 255 255 / 0.22);
+    animation-name: random-particle-drift;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    will-change: transform;
+  }
+}
+
+@keyframes random-particle-drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  28% {
+    transform: translate3d(var(--drift-x-1), var(--drift-y-1), 0);
+  }
+
+  62% {
+    transform: translate3d(var(--drift-x-2), var(--drift-y-2), 0);
+  }
+
+  100% {
+    transform: translate3d(var(--drift-x-3), var(--drift-y-3), 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-particle {
+    animation: none;
+  }
 }
