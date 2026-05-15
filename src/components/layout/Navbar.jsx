@@ -15,6 +15,7 @@ function Navbar() {
   useEffect(() => {
     setCurrentPath(location.pathname);
   }, [location]);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
