@@ -7,7 +7,7 @@ const projectsData = [
     title: "Personal Portfolio (Current website)",
     description:
       "A responsive personal portfolio website built with React and Tailwind CSS.",
-    image: "./src/assets/default_project_image.jpg",
+    image: "",
     technologies: ["React", "Tailwind", "JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/Milktea0408/personal_website/",
     liveUrl: "https://yourportfolio.com",
@@ -26,7 +26,7 @@ const projectsData = [
     id: 3,
     title: "Coming Soon",
     description: "",
-    image: "./src/assets/default_project_image.jpg",
+    image: "",
     technologies: [],
     githubUrl: null,
     liveUrl: null,
@@ -69,12 +69,12 @@ function ProjectsSection() {
           </div>
 
           {/* Image pane */}
-          <div className="relative aspect-[16/10] md:aspect-auto md:flex-1">
+          <div className="relative aspect-[16/10] md:aspect-auto md:flex-1 bg-white/[0.03]">
             {project.image ? (
               <img
                 src={project.image}
                 alt={project.title}
-                className="absolute inset-0 w-full h-full object-cover object-top grayscale-[30%] opacity-80 hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 w-full h-full object-cover md:object-cover object-top grayscale-[30%] opacity-80 hover:opacity-100 transition-opacity duration-300"
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
