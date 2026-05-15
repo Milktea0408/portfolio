@@ -51,7 +51,7 @@ function About() {
         </section>
 
         {/* HOBBIES */}
-        <section className="pt-14">
+        {/* <section className="pt-14">
           <p className="font-mono text-[0.6rem] tracking-[0.14em] uppercase text-cream/28 mb-8">
             Interests &amp; Hobbies
           </p>
@@ -89,7 +89,20 @@ function About() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
+
+        {/* CTA */}
+        {/* <div className="flex items-center gap-5">
+          <button
+            onClick={() => navigate("/")}
+            className="font-mono text-[0.65rem] tracking-[0.12em] uppercase bg-cream text-ink px-7 py-3 hover:opacity-70 transition-opacity duration-200"
+          >
+            See my work →
+          </button>
+          <span className="font-mono text-[0.62rem] tracking-[0.06em] text-cream/28">
+            View projects &amp; skills
+          </span>
+        </div> */}
       </main>
 
       <Footer />
